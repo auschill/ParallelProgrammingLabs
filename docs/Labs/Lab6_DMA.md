@@ -1,5 +1,8 @@
 ---
-sort: 6
+layout: default
+title: Lab6
+parent: FPGA/SoC Labs
+nav_order: 4.06
 ---
 
 

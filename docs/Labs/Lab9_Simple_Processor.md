@@ -1,6 +1,10 @@
 ---
-sort: 9
+layout: default
+title: Lab9
+parent: FPGA/SoC Labs
+nav_order: 4.09
 ---
+
 
 # Lab9_Simple_Processor
 

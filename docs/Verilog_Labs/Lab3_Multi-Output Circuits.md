@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lab3_Multi-Output Circuits
+title: Lab3
 parent: Verilog Labs (Basics)
 nav_order: 3.03
 ---

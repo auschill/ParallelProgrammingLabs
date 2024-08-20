@@ -1,5 +1,8 @@
 ---
-sort: 9
+layout: default
+title: Lab9
+parent: Verilog Labs (Basics)
+nav_order: 3.09
 ---
 
 # Lab9_Counters, Timers and Real-Time Clock    

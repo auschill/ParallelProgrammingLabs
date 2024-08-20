@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lab2_Addition
+title: Lab2
 parent: Verilog Labs (Basics)
 nav_order: 3.02
 ---

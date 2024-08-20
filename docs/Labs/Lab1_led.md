@@ -1,7 +1,9 @@
 ---
-sort: 1
+layout: default
+title: Lab1
+parent: FPGA/SoC Labs
+nav_order: 4.01
 ---
-
 
 # Lab1_led 
 

@@ -1,5 +1,8 @@
 ---
-sort: 4
+layout: default
+title: Lab4
+parent: FPGA/SoC Labs
+nav_order: 4.04
 ---
 
 

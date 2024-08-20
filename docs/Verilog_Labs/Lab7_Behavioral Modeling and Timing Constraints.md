@@ -1,6 +1,10 @@
 ---
-sort: 7
+layout: default
+title: Lab7
+parent: Verilog Labs (Basics)
+nav_order: 3.07
 ---
+
 
 # Lab7_Behavioral Modeling and Timing Constraints   
 

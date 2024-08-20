@@ -1,6 +1,10 @@
 ---
-sort: 11
+layout: default
+title: Lab11
+parent: Verilog Labs (Basics)
+nav_order: 3.11
 ---
+
 
 # Lab11_Sequential System Design Using ASM Charts    
 
