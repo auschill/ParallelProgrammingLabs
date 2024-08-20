@@ -1,6 +1,10 @@
 ---
-sort: 8
+layout: default
+title: Lab8
+parent: Verilog Labs (Basics)
+nav_order: 3.08
 ---
+
 
 # Lab8_Architectural Wizard and IP Catalog    
 
