@@ -1,6 +1,10 @@
 ---
-sort: 21
+layout: default
+title: Lab21
+parent: HLS Labs
+nav_order: 5.21
 ---
+
 
 
 # Lab21 FFT
