@@ -1,5 +1,8 @@
 ---
-sort: 2
+layout: default
+title: Lab2_Addition
+parent: Verilog Labs (Basics)
+nav_order: 3.02
 ---
 
 # Lab2_Addition
