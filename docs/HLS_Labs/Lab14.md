@@ -1,7 +1,9 @@
 ---
-sort: 14
+layout: default
+title: Lab14
+parent: HLS Labs
+nav_order: 5.14
 ---
-
 
 # Lab14 Misc
 
