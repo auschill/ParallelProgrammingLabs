@@ -2,7 +2,7 @@
 layout: default
 title: Lab2
 parent: FPGA/SoC Labs
-nav_order: 4.01
+nav_order: 4.02
 ---
 
 
