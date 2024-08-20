@@ -1,6 +1,10 @@
 ---
-sort: 5
+layout: default
+title: Lab5
+parent: FPGA/SoC Labs
+nav_order: 4.05
 ---
+
 
 
 # Lab5_IPI 
