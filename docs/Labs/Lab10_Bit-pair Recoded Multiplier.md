@@ -1,5 +1,8 @@
 ---
-sort: 10
+layout: default
+title: Lab10_Bit-pair Recoded Multiplier
+parent: FPGA/SoC Labs
+nav_order: 4.10
 ---
 
 # Lab10_Bit-pair Recoded Multiplier
