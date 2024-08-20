@@ -1,6 +1,10 @@
 ---
-sort: 4
+layout: default
+title: Lab4
+parent: HLS Labs
+nav_order: 5.04
 ---
+
 
 
 # Lab4 Task_level_Parallelism_control_driven_2
