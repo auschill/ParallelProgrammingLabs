@@ -1,6 +1,10 @@
 ---
-sort: 8
+layout: default
+title: Lab8
+parent: FPGA/SoC Labs
+nav_order: 4.08
 ---
+
 
 # Lab8_State_Machines
 
