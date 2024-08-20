@@ -1,5 +1,8 @@
 ---
-sort: 4
+layout: default
+title: Create Vitis HLS Project
+parent: Vitis HLS Tutor
+nav_order: 2.02
 ---
 
 # Create Vitis HLS Project
