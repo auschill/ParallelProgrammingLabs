@@ -1,5 +1,8 @@
 ---
-sort: 4
+layout: default
+title: Lab4
+parent: Verilog Labs (Basics)
+nav_order: 3.04
 ---
 
 # Lab4_Tasks, Functions, and Testbench 
