@@ -1,6 +1,10 @@
 ---
-sort: 7
+layout: default
+title: Lab7
+parent: FPGA/SoC Labs
+nav_order: 4.07
 ---
+
 
 # Lab7_Fibonacci_sp
 
