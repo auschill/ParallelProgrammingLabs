@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lab3_Multi-Output Circuits: Encoders, Decoders, and Memories 
+title: Lab3_Multi-Output Circuits
 parent: Verilog Labs (Basics)
 nav_order: 3.03
 ---
