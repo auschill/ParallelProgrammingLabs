@@ -1,5 +1,8 @@
 ---
-sort: 1
+layout: default
+title: Lab1_Modeling_Concepts
+parent: Verilog Labs (Basics)
+nav_order: 3.01
 ---
 
 # Lab1_Modeling_Concepts
