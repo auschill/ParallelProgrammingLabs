@@ -1,6 +1,10 @@
 ---
-sort: 10
+layout: default
+title: Lab10
+parent: Verilog Labs (Basics)
+nav_order: 3.10
 ---
+
 
 # Lab10_Finite State Machines    
 
