@@ -1,6 +1,10 @@
 ---
-sort: 25
+layout: default
+title: Lab25
+parent: HLS Labs
+nav_order: 5.25
 ---
+
 
 
 # Lab25 Tiling-based Convolution
