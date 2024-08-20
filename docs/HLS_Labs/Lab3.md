@@ -1,6 +1,10 @@
 ---
-sort: 3
+layout: default
+title: Lab3
+parent: HLS Labs
+nav_order: 5.03
 ---
+
 
 
 # Lab3 Task_level_Parallelism_control_driven_1
