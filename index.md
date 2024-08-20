@@ -1,35 +1,25 @@
 ---
 title: Home
 layout: home
+nav_order: 1
 ---
+# FPGA/SoC/Verilog/HLS
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+This open-source site is designed to support the educational needs of students, engineers, and enthusiasts in the fields of FPGA/ASIC, SoC, and HLS. The content and lab exercises available here draw upon materials from several reputable sources with modifications, including workshops offered by AMD/Xilinx [link](https://www.amd.com/en/corporate/university-program/workshops.html), the "Parallel Programming for FPGAs" course [link](https://pp4fpgas.readthedocs.io/en/latest/index.html) at UCSD, "Digital Computer Design" course [link](https://www.coursesidekick.com/electrical-engineering/2115253) at Clemson, and the "Parallel Programming on FPGAs" course [link](https://sharclab.ece.gatech.edu/teaching/2023-spring-fpga/) at Georgia Tech. Educators are encouraged to incorporate these resources into their curriculum.
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+## Contents:
 
-More specifically, the created site:
+- [Preparation](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/Vitis_HLS_Tutor)
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+- [Verilog Labs](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/Verilog_Labs/)
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+- [FPGA/SoC Labs](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/Labs/)
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+- [HLS Labs](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/HLS_Labs/)
 
-To get started with creating a site, simply:
+# Acknowledgement
 
-1. click "[use this template]" to create a GitHub repository
-2. go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
-
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo) in the template README.
-
-----
-
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
-
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+- This is effort is partially supported by **Cadence Design Systems** through Clemson Cadence Project [link](https://sites.google.com/g.clemson.edu/clemson-cadence-project/home).
+- This is effort is partially supported by NSF grants CNS-2027069 and CCF-2106750.
+- Many Ugrad and Grad students from Clemson University and the University of Rhode Island (URI) contributed to this repo.
+- Facutly members: Prof. Qing (Ken) Yang [link](https://www.ele.uri.edu/~qyang/) from URI and Prof. Tao Wei [link](https://sites.google.com/g.clemson.edu/nextlabdoc/home) from Clemson.

@@ -1,5 +1,8 @@
 ---
-sort: 1
+layout: default
+title: Install Vitis
+parent: Vitis HLS Tutor
+nav_order: 2.01
 ---
 
 # Board and Vitis Installation Guide
