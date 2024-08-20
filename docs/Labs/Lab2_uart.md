@@ -1,6 +1,10 @@
 ---
-sort: 2
+layout: default
+title: Lab2
+parent: FPGA/SoC Labs
+nav_order: 4.01
 ---
+
 
 
 # Lab2_uart
