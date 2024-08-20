@@ -1,5 +1,8 @@
 ---
-sort: 24
+layout: default
+title: Lab24
+parent: HLS Labs
+nav_order: 5.24
 ---
 
 

@@ -1,5 +1,8 @@
 ---
-sort: 11
+layout: default
+title: Lab11
+parent: HLS Labs
+nav_order: 5.11
 ---
 
 

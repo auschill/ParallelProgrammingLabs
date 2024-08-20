@@ -1,6 +1,10 @@
 ---
-sort: 22
+layout: default
+title: Lab22
+parent: HLS Labs
+nav_order: 5.22
 ---
+
 
 
 # Lab22 Linebuffer_0

@@ -1,6 +1,10 @@
 ---
-sort: 5
+layout: default
+title: Lab5
+parent: HLS Labs
+nav_order: 5.05
 ---
+
 
 
 # Lab5 TLP_data_driven_1

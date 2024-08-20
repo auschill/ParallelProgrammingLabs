@@ -1,6 +1,10 @@
 ---
-sort: 23
+layout: default
+title: Lab23
+parent: HLS Labs
+nav_order: 5.23
 ---
+
 
 
 # Lab23 Linebuffer_1

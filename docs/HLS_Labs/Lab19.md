@@ -1,6 +1,10 @@
 ---
-sort: 19
+layout: default
+title: Lab19
+parent: HLS Labs
+nav_order: 5.19
 ---
+
 
 
 # Lab19 Cordic

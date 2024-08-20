@@ -1,7 +1,9 @@
 ---
-sort: 15
+layout: default
+title: Lab15
+parent: HLS Labs
+nav_order: 5.15
 ---
-
 
 # Lab15 Model_pointers
 

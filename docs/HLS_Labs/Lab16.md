@@ -1,6 +1,10 @@
 ---
-sort: 16
+layout: default
+title: Lab16
+parent: HLS Labs
+nav_order: 5.16
 ---
+
 
 
 # Lab16 Model_2

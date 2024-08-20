@@ -1,6 +1,10 @@
 ---
-sort: 2
+layout: default
+title: Lab2
+parent: HLS Labs
+nav_order: 5.02
 ---
+
 
 
 # Lab2 Pipelining

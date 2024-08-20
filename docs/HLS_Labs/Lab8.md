@@ -1,6 +1,10 @@
 ---
-sort: 8
+layout: default
+title: Lab8
+parent: HLS Labs
+nav_order: 5.08
 ---
+
 
 
 # Lab8 Interface_Memory_1
