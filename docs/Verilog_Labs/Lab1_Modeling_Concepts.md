@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lab1_Modeling_Concepts
+title: Lab1
 parent: Verilog Labs (Basics)
 nav_order: 3.01
 ---
