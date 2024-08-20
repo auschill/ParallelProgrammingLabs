@@ -1,5 +1,8 @@
 ---
-sort: 3
+layout: default
+title: Lab3_Multi-Output Circuits: Encoders, Decoders, and Memories 
+parent: Verilog Labs (Basics)
+nav_order: 3.03
 ---
 
 # Lab3_Multi-Output Circuits: Encoders, Decoders, and Memories 
