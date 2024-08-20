@@ -1,6 +1,10 @@
 ---
-sort: 5
+layout: default
+title: Lab5
+parent: Verilog Labs (Basics)
+nav_order: 3.05
 ---
+
 
 # Lab5_Modeling Latches and Flip-flops  
 
