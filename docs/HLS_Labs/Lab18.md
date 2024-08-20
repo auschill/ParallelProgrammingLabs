@@ -1,6 +1,10 @@
 ---
-sort: 18
+layout: default
+title: Lab18
+parent: HLS Labs
+nav_order: 5.18
 ---
+
 
 # Lab18 FIR
 
