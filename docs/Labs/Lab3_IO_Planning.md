@@ -1,6 +1,10 @@
 ---
-sort: 3
+layout: default
+title: Lab3
+parent: FPGA/SoC Labs
+nav_order: 4.03
 ---
+
 
 
 # Lab3_I/O_Planning  
