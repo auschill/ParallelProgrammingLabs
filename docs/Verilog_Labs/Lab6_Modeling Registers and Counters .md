@@ -1,6 +1,10 @@
 ---
-sort: 6
+layout: default
+title: Lab6
+parent: Verilog Labs (Basics)
+nav_order: 3.06
 ---
+
 
 # Lab6_Modeling Registers and Counters  
 
