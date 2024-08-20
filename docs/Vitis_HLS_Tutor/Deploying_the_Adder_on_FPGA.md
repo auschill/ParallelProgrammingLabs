@@ -2,7 +2,7 @@
 layout: default
 title: Deploying the Adder on FPGA
 parent: Vitis HLS Tutor
-nav_order: 2.03
+nav_order: 2.04
 ---
 
 
