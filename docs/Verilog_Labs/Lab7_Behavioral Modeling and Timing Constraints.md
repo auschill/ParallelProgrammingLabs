@@ -294,7 +294,8 @@ module mux4to1 (
         else if (sel == 2'b10) begin
             out = in[2]; // Select input 2
         end
-        else if (sel == 2'b11) begin
+      //  else if (sel == 2'b11) begin
+        else begin
             out = in[3]; // Select input 3
         end
     end
@@ -302,6 +303,14 @@ endmodule
 
 
 ```
+Now we can see the ```Schematic``` under the RTL ANALYSIS part like below.
+Without the else statement, the synthetic circuit is more complicated. Because if Verilog does not have an else statement, it will have an extra flip-flop/register like below:
+
+<div align=center><img src="imgs/elseif.png" alt="drawing" width="600"/></div>
+
+With the else statement:
+
+<div align=center><img src="imgs/else.png" alt="drawing" width="600"/></div>
 
 **tb.v**
 ```verilog

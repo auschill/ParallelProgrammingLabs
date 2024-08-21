@@ -417,7 +417,7 @@ module ROM_4x2_tb;
     wire [1:0] ROM_data;         // Data lines from the ROM as output
 
     // Instantiate the Device Under Test (DUT) with the named port mapping
-    Lab3_3_1 DUT(
+    ROM_4x2 DUT(
         .ROM_data(ROM_data), 
         .ROM_addr(ROM_addr)
     );

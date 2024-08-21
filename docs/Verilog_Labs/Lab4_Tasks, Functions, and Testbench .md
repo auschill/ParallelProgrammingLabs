@@ -235,7 +235,9 @@ endmodule
 
 ```
 
+Now we can see the ```Schematic``` under the RTL ANALYSIS part like below:
 
+<div align=center><img src="imgs/loop.png" alt="drawing" width="1000"/></div>
 
 
 **tb.v**
