@@ -383,7 +383,7 @@ If you see the "TEST PASSED!" after the C simulation, the function ```real_matmu
 
 #### Create the Vivado project
 
-The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgammingLabs/HLS_Labs/Lab1.html#implementation). We also need to choose the number of the DMA according to the number of the interface.
+The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/HLS_Labs/Lab1.html). We also need to choose the number of the DMA according to the number of the interface.
 
 <div align=center><img src="Images/20/12.png" alt="drawing" width="1200"/></div>
 
@@ -661,7 +661,7 @@ The simulation result is shown below:
 
 #### Create the Vivado project
 
-The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgammingLabs/HLS_Labs/Lab1.html). And we need to choose the number of the DMA according to the number of the interface.
+The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/HLS_Labs/Lab1.html). And we need to choose the number of the DMA according to the number of the interface.
 
 <div align=center><img src="Images/20/14.png" alt="drawing" width="1200"/></div>
 

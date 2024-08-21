@@ -482,7 +482,7 @@ And you will see the result below:
 <div align=center><img src="Images/18/10.png" alt="drawing" width="800"/></div>
 
 ### The last way
-Here is another possible implementation with systolic array architecture. The ```mvm_mixed``` function use the ```mixed_control_and_data_driven```(as shown in the [Lab5](https://uri-nextlab.github.io/ParallelProgammingLabs/HLS_Labs/Lab5.html#mixed_control_and_data_driven)). And the ```data_driven``` part is the ```PE_module``` which uses the ```hls::task```. The matrix_A_buffer is the ```control_driven``` which needs loops to finish the data process. You can compare the two ways (the second and last way) from the synthesis report.
+Here is another possible implementation with systolic array architecture. The ```mvm_mixed``` function use the ```mixed_control_and_data_driven```(as shown in the [Lab5](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/HLS_Labs/Lab5.html)). And the ```data_driven``` part is the ```PE_module``` which uses the ```hls::task```. The matrix_A_buffer is the ```control_driven``` which needs loops to finish the data process. You can compare the two ways (the second and last way) from the synthesis report.
 
 **mvm_mixed.h**
 ```c++
@@ -635,11 +635,11 @@ And you will see the result below:
 
 <div align=center><img src="Images/18/10.png" alt="drawing" width="800"/></div>
 
-And this IP can transfer data with the AXI_DMA, because the port is ```axis```, but we should add the ```middle_data``` IP to provide the ```last``` signal. You can find the ```middle_data``` coding in the [Lab5/Simple_data_driven/Export the test_IP](https://uri-nextlab.github.io/ParallelProgammingLabs/HLS_Labs/Lab5.html#export-the-testip).
+And this IP can transfer data with the AXI_DMA, because the port is ```axis```, but we should add the ```middle_data``` IP to provide the ```last``` signal. You can find the ```middle_data``` coding in the [Lab5/Simple_data_driven/Export the test_IP](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/HLS_Labs/Lab5.html).
 
 #### Create the Vivado project
 
-The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgammingLabs/HLS_Labs/Lab1.html). And we need to choose the number of the DMA according to the number of the interface.
+The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/HLS_Labs/Lab1.html). And we need to choose the number of the DMA according to the number of the interface.
 
 <div align=center><img src="Images/18/9.png" alt="drawing" width="1200"/></div>
 
