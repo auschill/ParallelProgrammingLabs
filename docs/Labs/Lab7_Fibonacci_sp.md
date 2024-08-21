@@ -228,7 +228,7 @@ endmodule // End of the testbench module tb_fi_ch
 
 ### Implementation
 
-The part can reference the [Generate Bitstream](https://uri-nextlab.github.io/ParallelProgammingLabs/Labs/Lab1_led.html#generate-the-bitstream) in lab1.
+The part can reference the [Generate Bitstream](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/Labs/Lab1_led.html) in lab1.
 
 The block design is shown below:
 
@@ -405,7 +405,7 @@ endmodule // End of the testbench module tb_3
 
 ### Implementation
 
-The part can reference the [Generate Bitstream](https://uri-nextlab.github.io/ParallelProgammingLabs/Labs/Lab1_led.html#generate-the-bitstream) in lab1.
+The part can reference the [Generate Bitstream](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/Labs/Lab1_led.html) in lab1.
 
 The block design is shown below:
 
@@ -563,7 +563,7 @@ endmodule // End of the testbench module tb_4
 
 ### Implementation
 
-The part can reference the [Generate Bitstream](https://uri-nextlab.github.io/ParallelProgammingLabs/Labs/Lab1_led.html#generate-the-bitstream) in lab1.
+The part can reference the [Generate Bitstream](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/Labs/Lab1_led.html) in lab1.
 We add the AXI_GPIO, double click on the IP, and have the setting like below:
 
 <div align=center><img src="imgs/v1/33.png" alt="drawing" width="500"/></div>
@@ -858,7 +858,7 @@ endmodule // End of the testbench module tb_5
 
 ### Implementation
 
-The part can reference the [Generate Bitstream](https://uri-nextlab.github.io/ParallelProgammingLabs/Labs/Lab1_led.html#generate-the-bitstream) in lab1.
+The part can reference the [Generate Bitstream](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/Labs/Lab1_led.html) in lab1.
 The setting of the ```AXI_GPIO``` is the same as part IV.
 
 The block design is shown below:

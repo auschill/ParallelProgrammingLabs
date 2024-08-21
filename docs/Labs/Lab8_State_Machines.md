@@ -423,7 +423,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports submit_0]
 
 ### Implementation
 
-The part can reference the [Generate Bitstream](https://uri-nextlab.github.io/ParallelProgammingLabs/Labs/Lab1_led.html#generate-the-bitstream) in lab1.
+The part can reference the [Generate Bitstream](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/Labs/Lab1_led.html) in lab1.
 
 The block design is shown below:
 
