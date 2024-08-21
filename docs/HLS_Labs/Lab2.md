@@ -546,7 +546,7 @@ The "enable" signal for the first stage is optional. It is only required when a 
 
 ## Create Vivado Project
 
-The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgammingLabs/HLS_Labs/Lab1.html)
+The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/HLS_Labs/Lab1.html)
 
 The different between the lab1 and lab2 is the ```AXI_DMA```. For this IP, we need one read interface and one write interfaces. We have deliberately configured ```AXI_DMA0``` with  the read channels enabled and the write channel enabled. This design choice is driven by the predominant data flow requirements of our IP core, which involves receiving data from memory. 
 
