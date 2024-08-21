@@ -585,7 +585,7 @@ After running the C synthesis, we click the ```export RTL```and choose the fold 
 
 ### Create the Vivado project
 
-The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgammingLabs/HLS_Labs/Lab1.html). And we need to choose the number of the DMA according to the number of the interface.
+The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/HLS_Labs/Lab1.html). And we need to choose the number of the DMA according to the number of the interface.
 
 We can see the ```x_TDATA``` is 8 bits and the ```y_TDATA``` is 24 bits. Since fixed-point data is not supported on software, it is required to transfer a software supporting type to the required fixed-point data as well as the inverse transfer. Xilinx provides an official IP to accomplish this. Right-click on the blank area and select 'ADD IP', search for 'floating' and select the 'Floating-point'. Double-click the floating-point IP just added to open the configuration window.
 

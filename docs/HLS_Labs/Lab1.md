@@ -390,7 +390,7 @@ Each interface can be individually configured based on the specific requirements
 
 <div align=center><img src="Images/1_5.png" alt="drawing" width="1000"/></div>
 
-Then connect the DMA using reference materials [here](https://uri-nextlab.github.io/ParallelProgammingLabs/Labs/Lab6_DMA.html).
+Then connect the DMA using reference materials [here](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/Labs/Lab6_DMA.html).
 
 ## Run synthesis,  Implementation and generate bitstream
 

@@ -198,11 +198,11 @@ int main() {
 }
 ```
 
-And export the IP core based on the above operations. We also need middle_data IP to provide the last and keep the signal. [Ref](https://uri-nextlab.github.io/ParallelProgammingLabs/HLS_Labs/Lab5.html)
+And export the IP core based on the above operations. We also need middle_data IP to provide the last and keep the signal. [Ref](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/HLS_Labs/Lab5.html)
 
 #### Create the Vivado project
 
-The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgammingLabs/HLS_Labs/Lab1.html). And we need to choose the number of the DMA according to the number of the interface.
+The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/HLS_Labs/Lab1.html). And we need to choose the number of the DMA according to the number of the interface.
 
 <div align=center><img src="Images/6_10.PNG" alt="drawing" width="1200"/></div>
 
@@ -618,7 +618,7 @@ Before you add the ```middle_data``` IP, you need to change the ```num``` in the
 
 #### Create the Vivado project
 
-The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgammingLabs/HLS_Labs/Lab1.html)
+The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/HLS_Labs/Lab1.html)
 
 <div align=center><img src="Images/6_3.PNG" alt="drawing" width="1200"/></div>
 

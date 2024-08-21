@@ -583,7 +583,7 @@ And export the IP core based on the above operations.
 
 #### Create the Vivado project
 
-The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgammingLabs/HLS_Labs/Lab1.html)
+The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/HLS_Labs/Lab1.html)
 
 <div align=center><img src="Images/5_16.png" alt="drawing" width="1200"/></div>
 

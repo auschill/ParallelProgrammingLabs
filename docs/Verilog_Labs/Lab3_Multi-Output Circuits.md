@@ -764,7 +764,7 @@ Then we can click on the Run synthesis under the SYNTHESIS and Run implementatio
 
 <div align=center><img src="imgs/v1/12.png" alt="drawing" width="1200"/></div>
 
-Generate the bitstream and program device like [Lab1](https://uri-nextlab.github.io/ParallelProgammingLabs/Verilog_Labs/Lab1_Modeling_Concepts.html).
+Generate the bitstream and program device like [Lab1](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/Verilog_Labs/Lab1_Modeling_Concepts.html).
 
 Then you can press the button on the board, and you can see the LED is on like below:
 

@@ -270,7 +270,7 @@ set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets Qbar_OBUF]
 
 
 
-Generate the bitstream and program device like [Lab1](https://uri-nextlab.github.io/ParallelProgammingLabs/Verilog_Labs/Lab1_Modeling_Concepts.html).
+Generate the bitstream and program device like [Lab1](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/Verilog_Labs/Lab1_Modeling_Concepts.html).
 
 Then you can press the button on the board, and you can see the LED is on like below:
 

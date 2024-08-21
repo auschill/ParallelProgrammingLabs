@@ -109,7 +109,7 @@ int main() {
 ```
 #### Create the Vivado project
 
-The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgammingLabs/HLS_Labs/Lab1.html). And we need to choose the number of the DMA according to the number of the interface.
+The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/HLS_Labs/Lab1.html). And we need to choose the number of the DMA according to the number of the interface.
 
 <div align=center><img src="Images/13/4.png" alt="drawing" width="1000"/></div>
 
@@ -447,7 +447,7 @@ The export IP is shown below.
 
 #### Create the Vivado project
 
-The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgammingLabs/HLS_Labs/Lab1.html). And we need to choose the number of the DMA according to the number of the interface.
+The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/HLS_Labs/Lab1.html). And we need to choose the number of the DMA according to the number of the interface.
 
 <div align=center><img src="Images/13/9.PNG" alt="drawing" width="1000"/></div>
 
@@ -602,7 +602,7 @@ The export IP is shown below.
 
 #### Create the Vivado project
 
-The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgammingLabs/HLS_Labs/Lab1.html). And we need to choose the number of the DMA according to the number of the interface.
+The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/HLS_Labs/Lab1.html). And we need to choose the number of the DMA according to the number of the interface.
 
 <div align=center><img src="Images/13/13.PNG" alt="drawing" width="1000"/></div>
 
@@ -719,7 +719,7 @@ int main() {
 ```
 #### Create the Vivado project
 
-The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgammingLabs/HLS_Labs/Lab1.html). We also need to choose the number of the DMA according to the number of the interface. We also need middle_data IP to provide the last and keep the signal. [Ref](https://uri-nextlab.github.io/ParallelProgammingLabs/HLS_Labs/Lab5.html)
+The configure block design can use reference materials [here](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/HLS_Labs/Lab1.html). We also need to choose the number of the DMA according to the number of the interface. We also need middle_data IP to provide the last and keep the signal. [Ref](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/HLS_Labs/Lab5.html)
 
 <div align=center><img src="Images/13/4_2.png" alt="drawing" width="1000"/></div>
 
