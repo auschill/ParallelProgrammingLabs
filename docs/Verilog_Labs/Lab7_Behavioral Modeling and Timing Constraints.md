@@ -295,7 +295,7 @@ module mux4to1 (
             out = in[2]; // Select input 2
         end
       //  else if (sel == 2'b11) begin
-        else
+        else begin
             out = in[3]; // Select input 3
         end
     end
