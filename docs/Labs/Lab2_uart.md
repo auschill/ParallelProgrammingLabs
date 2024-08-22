@@ -258,7 +258,7 @@ Right click on `design_1_wrapper` and choose Set to Top if it is not the top fil
 
 By click the `Schematic` under the `Open Implemented Design`, and you can check the pin assignments like below:
 
-<div align=center><img src="imgs/v1/5.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="imgs/v1/5_2.png" alt="drawing" width="1000"/></div>
 
 And the pin assignments of led are below the page.
 
