@@ -162,9 +162,9 @@ set_property PACKAGE_PIN L19 [get_ports btn_pin_0]
 set_property IOSTANDARD LVCMOS33 [get_ports btn_pin_0]
 
 # CLK source 125 MHz
-create_clock -period 8.000 -name clk_pin_0 -waveform {0.000 4.000} [get_ports clk_pin]
-set_property PACKAGE_PIN H16 [get_ports clk_pin]
-set_property IOSTANDARD LVCMOS33 [get_ports clk_pin]
+create_clock -period 8.000 -name clk_pin_0 -waveform {0.000 4.000} [get_ports clk_pin_0]
+set_property PACKAGE_PIN H16 [get_ports clk_pin_0]
+set_property IOSTANDARD LVCMOS33 [get_ports clk_pin_0]
 ```
 ### Synthesize the Design
 

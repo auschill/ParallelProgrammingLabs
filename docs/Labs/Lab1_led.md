@@ -346,7 +346,8 @@ Notice that we monitored the expected led output at 10 ns after the input is cha
 
 ### Generate the Bitstream
 
-*Notice!* You may encounter a stuck problem. No worries, just restart the vivado and do the same operations.
+*Notice!* You may encounter a stuck problem. No worries, just restart the vivado and do the same operations. For more information about ZYNQ, please refer to  [Reference1](https://www.amd.com/en/products/adaptive-socs-and-fpgas/soc/zynq-7000.html) [Reference2](http://www.zynqbook.com/
+)
 
 In order to let it work successfully, we need to add *PS* part first.
 
