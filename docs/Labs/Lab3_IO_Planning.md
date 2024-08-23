@@ -111,6 +111,8 @@ The `uart_led_pynq.xdc` file will be created and added to the Sources tab.
 
 #### Synthesize the design. Use the Constraints Wizard to specify a clock frequency, and input and output delay constraints.
 
+For more detailed information about timing, please refer to the [Timing Analysis](https://people.ece.ubc.ca/~edc/2117.jan2022/lec6.pdf) and [Xilinx_timing](https://docs.amd.com/r/en-US/ug949-vivado-design-methodology/Input-Ports)
+ 
 * Click on the Run Synthesis in the Flow Navigator pane. Click on the Save if save project window appears. When synthesis is completed a form with three options will be displayed.
 
 * Select Open Synthesized Design and click OK.
