@@ -10,7 +10,7 @@ nav_order: 4.04
 
 ## Introduction
 
-In this lab you will use the uart_led design that was introduced in the previous labs. You will use *Mark Debug* feature and also the available *Integrated Logic Analyzer (ILA)* core (in IP Catalog) to debug the hardware.
+In this lab you will use the uart_led design that was introduced in the previous labs. You will use *Mark Debug* feature and also the available *Integrated Logic Analyzer (ILA)* core (in IP Catalog) to debug the hardware. For the linux, please refer to the [document](https://docs.amd.com/r/en-US/ug973-vivado-release-notes-install-license/Installing-Cable-Drivers) to manually install the driver.
 
 ## Objectives
 
