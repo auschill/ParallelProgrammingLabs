@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Generating Bitstream in Vivado
-parent: Vitis HLS Tutor
+parent: Preparation
 nav_order: 2.03
 ---
 
