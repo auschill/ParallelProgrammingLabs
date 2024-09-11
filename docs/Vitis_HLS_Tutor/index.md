@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Vitis HLS Tutor
+title: Preparation
 nav_order: 2
 has_children: true
 ---
