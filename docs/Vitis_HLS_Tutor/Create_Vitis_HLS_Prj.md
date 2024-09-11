@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Create Vitis HLS Project
-parent: Vitis HLS Tutor
+parent: Preparation
 nav_order: 2.02
 ---
 

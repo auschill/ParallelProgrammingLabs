@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Install Vitis
-parent: Vitis HLS Tutor
+parent: Preparation
 nav_order: 2.01
 ---
 
