@@ -173,7 +173,7 @@ Note that this example uses the default flow target setting of Vivado IP to illu
 struct T {
     int m;//4 bytes
     int n;// 4 bytes
-    bool o;// 1 byte
+    bool o;// 1 bit
 };
 
 struct S {
