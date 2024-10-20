@@ -61,8 +61,9 @@ Enter the correct password and click on "Login." If the password is right, you w
 
 ## Step 2
 
-If you already have a basic idea of Jupyter on these boards, upload the `.bit` file and the `.hwh` file to Jupyter. In the same folder, create a new `.ipynb` file for writing the script.
+Before proceeding, it's essential to familiarize yourself with the concepts of PYNQ, Jupyter Notebook, and Overlays via the website: [PYNQ-Z2](https://pynq.readthedocs.io/en/latest/getting_started/pynq_z2_setup.html)
 
+If you already have a basic understanding of using Jupyter on these boards, start by uploading the .bit file and the .hwh file to Jupyter. Then, create a new .ipynb file in the same directory to write your script.
 -[Overlay Tutorial](https://pynq.readthedocs.io/en/latest/overlay_design_methodology/overlay_tutorial.html)
 
 ## Step 3
