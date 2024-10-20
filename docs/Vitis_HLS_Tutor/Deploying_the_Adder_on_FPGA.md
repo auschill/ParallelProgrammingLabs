@@ -53,11 +53,11 @@ We must paste the MAC address in the ```Hardware Address```. We can write someth
 
 Once your Ethernet connection is set up and you have verified your IP address, you can proceed to access the entrance page by opening a Web Browser and enter the URL containing your IP address like ```130.127.199.27:9090```. When you press Enter, you should see the entrance page appear, confirming that your connection is properly set up.
 
-<div align=center><img src="Images/18/18.png" alt="drawing" width="400"/></div>
+<div align=center><img src="Images/18/18.png" alt="drawing" width="600"/></div>
 
 Enter the correct password and click on "Login." If the password is right, you will see the right page like below:
 
-<div align=center><img src="Images/18/19.png" alt="drawing" width="400"/></div>
+<div align=center><img src="Images/18/19.png" alt="drawing" width="600"/></div>
 
 ## Step 2
 
