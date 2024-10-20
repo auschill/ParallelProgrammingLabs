@@ -43,14 +43,29 @@ And we need to copy the address above.
 
   <div align=center><img src="Images/18/4.png" alt="drawing" width="600"/></div>
   
-We must paste the IP address in the ```Hardware Address```. We can write something in the ```Description ``` to mark our device. Accessing the school network through connecting to the school's Ethernet cable is currently the most convenient way. Then even if we don't have the board with us, we can still remotely access PYNQ by knowing the board's IP address, provided that the board is connected to the school network and powered on. 
+We must paste the MAC address in the ```Hardware Address```. We can write something in the ```Description ``` to mark our device. 
+
+* Lastly, if you've already set up your Ethernet connection (e.g., by connecting to Clemson's Ethernet network), you can verify your connection and find your assigned IP address using the ifconfig command. Follow the steps below to ensure everything is properly configured and to check your IP address:
+
+<div align=center><img src="Images/18/17.png" alt="drawing" width="400"/></div>
+
+Once your Ethernet connection is set up and you have verified your IP address, you can proceed to access the entrance page by opening a Web Browser and enter the URL containing your IP address like ```130.127.199.27:9090```. When you press Enter, you should see the entrance page appear, confirming that your connection is properly set up.
+
+<div align=center><img src="Images/18/18.png" alt="drawing" width="600"/></div>
+
+Enter the correct password and click on "Login." If the password is right, you will see the right page like below:
+
+<div align=center><img src="Images/18/19.png" alt="drawing" width="600"/></div>
+
+Accessing the school network through connecting to the school's Ethernet cable is currently the most convenient way. Then even if we don't have the board with us, we can still remotely access PYNQ by knowing the board's IP address, provided that the board is connected to the school network and powered on. 
 
 <div align=center><img src="Images/18/16.png" alt="drawing" width="400"/></div>
 
 ## Step 2
 
-If you already have a basic idea of Jupyter on these boards, upload the `.bit` file and the `.hwh` file to Jupyter. In the same folder, create a new `.ipynb` file for writing the script.
+Before proceeding, it's essential to familiarize yourself with the concepts of PYNQ, Jupyter Notebook, and Overlays via the website: [PYNQ-Z2](https://pynq.readthedocs.io/en/latest/getting_started/pynq_z2_setup.html)
 
+If you already have a basic understanding of using Jupyter on these boards, start by uploading the .bit file and the .hwh file to Jupyter. Then, create a new .ipynb file in the same directory to write your script.
 -[Overlay Tutorial](https://pynq.readthedocs.io/en/latest/overlay_design_methodology/overlay_tutorial.html)
 
 ## Step 3
