@@ -45,11 +45,11 @@ And we need to copy the address above.
   
 We must paste the MAC address in the ```Hardware Address```. We can write something in the ```Description ``` to mark our device. 
 
-* Lastly, if you've already set up your Ethernet connection (e.g., by connecting to Clemson's Ethernet network), you can verify your connection and find your assigned IP address using the ifconfig command. Follow the steps below to ensure everything is properly configured and to check your IP address:
+* Lastly, if you've already set up your Ethernet connection (e.g., by connecting to Clemson's Ethernet network), you can verify your connection and find your assigned IP address using the ifconfig command. Follow the steps below to ensure everything is properly configured and to check your IP address like below. (Hints: If you do not see your IP address, please wait a few seconds and try checking again. Sometimes it may take a moment for the network to assign an IP address after connecting the Ethernet cable.)
 
 <div align=center><img src="Images/18/17.png" alt="drawing" width="400"/></div>
 
-Once your Ethernet connection is set up and you have verified your IP address, you can proceed to access the entrance page by opening a Web Browser and enter the URL containing your IP address like ```130.127.199.27:9090```. When you press Enter, you should see the entrance page appear, confirming that your connection is properly set up.
+Once your Ethernet connection is set up and you have verified your IP address, you can proceed to access the entrance page by opening a Web Browser and enter the URL containing your IP address like ```130.127.199.27:9090```. When you press Enter, you should see the entrance page appear, confirming that your connection is properly set up. 
 
 <div align=center><img src="Images/18/18.png" alt="drawing" width="600"/></div>
 
