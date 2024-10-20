@@ -25,7 +25,7 @@ To enhance PYNQ's accessibility and functionality, you can directly connect it t
 
 Follow these steps to set up this connection:
 
-* First, we need to connect to the PYNQ board via a serial port terminal, such as MobaXterm, using the cable that also supplies power to the board, and we need to set some parameters like below:
+* First, we need to connect to the PYNQ board via a serial port terminal, such as MobaXterm, using the cable (miron USB) that also supplies power to the board, and we need to set some parameters like below:
 
   <div align=center><img src="Images/18/5.png" alt="drawing" width="600"/></div>
 
