@@ -16,7 +16,7 @@ If you have not used the PYNQ before, check the following link for setup:
 
 -[Optional] Additionally, we can enhance the usability of PYNQ on campus through the following approach:
 
-* Firstly, we need to connect the PYNQ by the Serial Port Terminal (like MobXterm), and we need to set some parameters like below:
+* First, we need to connect to the PYNQ board via a serial port terminal, such as MobaXterm, using the cable that also supplies power to the board, and we need to set some parameters like below:
 
   <div align=center><img src="Images/18/5.png" alt="drawing" width="600"/></div>
 
