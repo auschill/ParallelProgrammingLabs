@@ -14,7 +14,8 @@ If you have not used the PYNQ before, check the following link for setup:
 
 -[PYNQ-Z2 Setup Guide](https://pynq.readthedocs.io/en/latest/getting_started/pynq_z2_setup.html).
 
-# [Optional] (This section assumes familiarity with the official AMD documentation on PYNQ and successful completion of the setup described above.)
+# [Optional] 
+(This section assumes familiarity with the official AMD documentation on PYNQ and successful completion of the setup described above.)
 To enhance PYNQ's accessibility and functionality, you can directly connect it to the Clemson Campus Network using an Ethernet cable. This approach offers two key benefits:
 
 Remote access to PYNQ
