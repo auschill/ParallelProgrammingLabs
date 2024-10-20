@@ -19,7 +19,7 @@ If you have not used the PYNQ before, check the following link for setup:
 To enhance PYNQ's accessibility and functionality, you can directly connect it to the Clemson Campus Network using an Ethernet cable. This approach offers two key benefits:
 
 * Remote access to PYNQ
-* 
+  
 * Simultaneous internet connectivity and PYNQ configuration
 
 Follow these steps to set up this connection:
