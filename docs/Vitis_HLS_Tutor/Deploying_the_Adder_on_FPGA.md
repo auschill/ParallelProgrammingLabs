@@ -45,8 +45,6 @@ And we need to copy the address above.
   
 We must paste the MAC address in the ```Hardware Address```. We can write something in the ```Description ``` to mark our device. 
 
-<div align=center><img src="Images/18/16.png" alt="drawing" width="400"/></div>
-
 * Lastly, if you've already set up your Ethernet connection (e.g., by connecting to Clemson's Ethernet network), you can verify your connection and find your assigned IP address using the ifconfig command. Follow the steps below to ensure everything is properly configured and to check your IP address:
 
 <div align=center><img src="Images/18/17.png" alt="drawing" width="400"/></div>
@@ -60,6 +58,8 @@ Enter the correct password and click on "Login." If the password is right, you w
 <div align=center><img src="Images/18/19.png" alt="drawing" width="600"/></div>
 
 Accessing the school network through connecting to the school's Ethernet cable is currently the most convenient way. Then even if we don't have the board with us, we can still remotely access PYNQ by knowing the board's IP address, provided that the board is connected to the school network and powered on.
+
+<div align=center><img src="Images/18/16.png" alt="drawing" width="400"/></div>
 
 ## Step 2
 
