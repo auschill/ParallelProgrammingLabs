@@ -14,9 +14,18 @@ If you have not used the PYNQ before, check the following link for setup:
 
 -[PYNQ-Z2 Setup Guide](https://pynq.readthedocs.io/en/latest/getting_started/pynq_z2_setup.html).
 
--[Optional] Additionally, we can enhance the usability of PYNQ on campus through the following approach:
+# [Optional] 
+(This section assumes familiarity with the official AMD documentation on PYNQ and successful completion of the setup described above.)
 
-* Firstly, we need to connect the PYNQ by the Serial Port Terminal (like MobXterm), and we need to set some parameters like below:
+To enhance PYNQ's accessibility and functionality, you can directly connect it to the Clemson Campus Network using an Ethernet cable. This approach offers two key benefits:
+
+* Remote access to PYNQ
+  
+* Simultaneous internet connectivity and PYNQ configuration
+
+Follow these steps to set up this connection:
+
+* First, we need to connect to the PYNQ board via a serial port terminal, such as MobaXterm, using the cable that also supplies power to the board, and we need to set some parameters like below:
 
   <div align=center><img src="Images/18/5.png" alt="drawing" width="600"/></div>
 
