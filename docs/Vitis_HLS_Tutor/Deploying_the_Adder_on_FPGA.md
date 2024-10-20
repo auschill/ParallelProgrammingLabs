@@ -43,7 +43,7 @@ And we need to copy the address above.
 
   <div align=center><img src="Images/18/4.png" alt="drawing" width="600"/></div>
   
-We must paste the MAC address in the ```Hardware Address```. We can write something in the ```Description ``` to mark our device. Accessing the school network through connecting to the school's Ethernet cable is currently the most convenient way. Then even if we don't have the board with us, we can still remotely access PYNQ by knowing the board's IP address, provided that the board is connected to the school network and powered on. 
+We must paste the MAC address in the ```Hardware Address```. We can write something in the ```Description ``` to mark our device. 
 
 <div align=center><img src="Images/18/16.png" alt="drawing" width="400"/></div>
 
@@ -58,6 +58,8 @@ Once your Ethernet connection is set up and you have verified your IP address, y
 Enter the correct password and click on "Login." If the password is right, you will see the right page like below:
 
 <div align=center><img src="Images/18/19.png" alt="drawing" width="600"/></div>
+
+Accessing the school network through connecting to the school's Ethernet cable is currently the most convenient way. Then even if we don't have the board with us, we can still remotely access PYNQ by knowing the board's IP address, provided that the board is connected to the school network and powered on.
 
 ## Step 2
 
