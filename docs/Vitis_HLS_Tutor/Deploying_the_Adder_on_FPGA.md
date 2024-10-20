@@ -25,7 +25,9 @@ To enhance PYNQ's accessibility and functionality, you can directly connect it t
 
 Follow these steps to set up this connection:
 
-* First, connect to the PYNQ board using a serial port terminal, such as MobaXterm, via the micro USB cable that provides power to the board. (Connect one end of the USB cable to your PC or laptop, and the other end to the PROG - UART MicroUSB port on the PYNQ board.) Then you'll need to configure the following parameters:
+* To begin, follow these steps to connect to the PYNQ board:
+
+Connect one end of the USB cable to your PC or laptop, and the other end to the PROG - UART MicroUSB port on the PYNQ board. This cable serves two purposes: (It provides power to the board; It establishes a serial connection for communication) Download a serial terminal tool on your computer. MobaXterm is recommended, but you can use any similar software. Then you'll need to configure the following parameters:
 
   <div align=center><img src="Images/18/5.png" alt="drawing" width="600"/></div>
 
