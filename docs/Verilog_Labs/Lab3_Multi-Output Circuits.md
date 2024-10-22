@@ -659,24 +659,24 @@ module lab3_3_1(
     always @(*) begin // Triggered on any change of 'douta'
         case (douta)
             3'b001: begin // ROM output for 'a == b'
-                Lt <= 0;
-                Eq <= 1;
-                Gt <= 0;
+                Lt = 0;
+                Eq = 1;
+                Gt = 0;
             end
             3'b010: begin // ROM output for 'a < b'
-                Lt <= 1;
-                Eq <= 0;
-                Gt <= 0;
+                Lt = 1;
+                Eq = 0;
+                Gt = 0;
             end
             3'b100: begin // ROM output for 'a > b'
-                Lt <= 0;
-                Eq <= 0;
-                Gt <= 1;
+                Lt = 0;
+                Eq = 0;
+                Gt = 1;
             end
             default: begin // Safety default case to handle unexpected ROM outputs
-                Lt <= 0;
-                Eq <= 0;
-                Gt <= 0;
+                Lt = 0;
+                Eq = 0;
+                Gt = 0;
             end
         endcase
     end
