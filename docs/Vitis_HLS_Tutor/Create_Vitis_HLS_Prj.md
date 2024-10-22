@@ -74,7 +74,7 @@ Next, create a textbench named `main.c` as the following:
 
 <div align=center><img src="Images/7.png" alt="drawing" width="600"/></div>
 
-```C++
+```cpp
 // main.c
 #include <stdio.h>
 
