@@ -51,7 +51,7 @@ Now, we can design our accelerator in **C++** and simulate with Vitis. To do so,
 
 <div align=center><img src="Images/6.png" alt="drawing" width="600"/></div>
 
-```C++
+```cpp
 // top.c
 void top(int a_r[100], int b_r[100], int sum_r[100])
 {
@@ -74,7 +74,7 @@ Next, create a textbench named `main.c` as the following:
 
 <div align=center><img src="Images/7.png" alt="drawing" width="600"/></div>
 
-```C++
+```cpp
 // main.c
 #include <stdio.h>
 
