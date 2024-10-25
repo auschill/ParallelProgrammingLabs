@@ -552,53 +552,55 @@ We can run Simulation to check the code by clicking the Run Simulation under SIM
 
 **ROM_comparator_tb.v**
 ```verilog
-// Testbench for ROM-based 2-bit comparator
-module ROM_comparator_tb;
+// Testbench for the ROM-based 2-bit comparator
+module lab3_3_1_tb;
 
-    // Input signals for the comparator are declared as regs so they can be driven by the testbench.
-    reg [1:0] a;          // First 2-bit input for the comparator
-    reg [1:0] b;          // Second 2-bit input for the comparator
+    // Testbench signals
+    reg clk;             // Clock signal
+    reg [1:0] a, b;      // Inputs to the comparator (2-bit each)
+    wire Lt, Eq, Gt;     // Outputs from the comparator: Less than, Equal, Greater than
 
-    // Output signals from the comparator are declared as wires since they are driven by the ROM_comparator module.
-    wire Lt; // Output indicating whether a < b
-    wire Eq; // Output indicating whether a == b
-    wire Gt; // Output indicating whether a > b
-
-    // Instantiate the Device Under Test (DUT) with the named port mapping
-    lab3_3_2 DUT(
-        .a(a), 
-        .b(b),
-        .Lt(Lt),
-        .Eq(Eq),
-        .Gt(Gt)
+    // Instantiate the Device Under Test (DUT)
+    lab3_3_1 DUT(
+        .clk(clk),       // Connect the clock signal to the DUT
+        .a(a),           // Connect input 'a' to the DUT
+        .b(b),           // Connect input 'b' to the DUT
+        .Lt(Lt),         // Connect 'Lt' output from the DUT
+        .Eq(Eq),         // Connect 'Eq' output from the DUT
+        .Gt(Gt)          // Connect 'Gt' output from the DUT
     );
 
-    // Test sequence
-    integer i; // Variable for loop iteration
+    // Clock generation
     initial begin
-        // Print header for readability in simulation output
-        $display("Comparing all possible combinations of 'a' and 'b':");
-        $display("A B | Lt Eq Gt");
-        $display("-------------");
-
-        // Loop through all possible combinations of 'a' and 'b'
-        for (i = 0; i < 16; i = i + 1) begin
-            {a, b} = i;  // Assign combination of 'a' and 'b' based on loop iteration
-            #10;         // Wait 10 time units to observe the outputs
-        end
-
-        // End simulation after all cases are tested
-        $finish;
+        clk = 1;                       // Initialize clock signal
+        forever #5 clk = ~clk;         // Generate a clock with a period of 10 time units (toggle every 5 units)
     end
 
-    // Optional: Monitor changes in variables
-    // This helps in observing the behavior of the DUT for different input combinations
+    integer i;  // Loop counter variable
+
+    // Test sequence
     initial begin
-        $monitor("At time %t, A = %b, B = %b | Lt = %b, Eq = %b, Gt = %b",
+        #5; // Short delay before starting the test sequence
+        
+        // Loop to test all possible combinations of inputs 'a' and 'b'
+        // Each combination represents 4-bit input {a, b} (a[1:0], b[1:0])
+        for (i = 0; i < 16; i = i + 1) begin 
+            #5;               // Wait for a few time units
+            {a, b} = i;       // Assign 'i' value to combined inputs 'a' and 'b'
+            #5;               // Wait for the next clock edge to evaluate the DUT
+        end
+    end
+
+    // Monitoring changes
+    initial begin
+        // Print the values of inputs and outputs whenever they change
+        // $monitor automatically updates and prints values at each time step
+        $monitor("Time: %t | a: %b, b: %b | Lt: %b, Eq: %b, Gt: %b",
                  $time, a, b, Lt, Eq, Gt);
     end
 
 endmodule
+
 
 ```
 
