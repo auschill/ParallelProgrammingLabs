@@ -469,6 +469,7 @@ Create and add the Verilog module with two inputs (a, b) and three outputs (lt, 
 **lab3_3_1.v**
 ```verilog
 module lab3_3_1(
+    input clk,
     input [1:0] a, // 2-bit input a
     input [1:0] b, // 2-bit input b
     output reg Lt, // a < b
@@ -476,40 +477,48 @@ module lab3_3_1(
     output reg Gt  // a > b
 );
 
-    reg [2:0] ROM[15:0]; // Define a ROM with enough space
-    wire [3:0] addr; // Combined address from A and B
+    // Temporary storage for ROM address and data
+    wire [3:0] addr_reg; // Storage for combined address
+    wire [2:0] douta;  // Data output from ROM
 
-    assign addr = {a, b}; // Combine A and B to form ROM address
+    // Instance of ROM
+    rom_data rom (
+      .clka(clk),        // Clock input
+      .addra(addr_reg),  // Address input (synchronized with clk)
+      .douta(douta)      // Data output
+    );
 
-   initial begin
-        $readmemb("ROM_data.txt", ROM); // Load ROM content from file
-    end
+    // Synchronize address changes with the clock
 
+     assign   addr_reg = {a, b}; // Update address register on clock edge
+
+
+    // Update comparison results based on ROM output, synchronously with the clock
     always @(*) begin
-        case (ROM[addr])
-            3'b001: begin // a == b
+        case (douta)
+            3'b001: begin // Case where a == b
                 Lt = 0;
                 Eq = 1;
                 Gt = 0;
             end
-            3'b010: begin // a < b
+            3'b010: begin // Case where a < b
                 Lt = 1;
                 Eq = 0;
                 Gt = 0;
             end
-            3'b100: begin // a > b
+            3'b100: begin // Case where a > b
                 Lt = 0;
                 Eq = 0;
                 Gt = 1;
             end
-            default: begin // Default case for safety
+            default: begin // Default case for safety (should not normally occur)
                 Lt = 0;
                 Eq = 0;
                 Gt = 0;
             end
         endcase
     end
-
+    
 endmodule
 
 ```
