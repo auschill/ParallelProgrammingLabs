@@ -565,7 +565,7 @@ module ROM_comparator_tb;
     wire Gt; // Output indicating whether a > b
 
     // Instantiate the Device Under Test (DUT) with the named port mapping
-    lab3_3_2 DUT(
+    lab3_3_1 DUT(
         .a(a), 
         .b(b),
         .Lt(Lt),
