@@ -482,7 +482,8 @@ module lab3_3_1(
     assign addr = {a, b}; // Combine A and B to form ROM address
 
    initial begin
-        $readmemb("ROM_data.txt", ROM); // Load ROM content from file
+        $readmemb("C:/all/Verilog_labs/lab3/project_2/ROM_data.txt", ROM); // Load ROM content from file
+// please correct the absolute path to the ROW_data.txt file, the above is mine and will not work for yours
     end
 
     always @(*) begin
@@ -512,9 +513,9 @@ module lab3_3_1(
 
 endmodule
 
+
+
 ```
-
-
 
 Create and add a text file that describes the design output.
 
@@ -543,26 +544,21 @@ a and b are concatenated to form a 4-bit address (addr), which is used to access
 001
 
 ```
-
-Create the logic in a document and save it as a .**txt** file. Then click on **Add Sources** under the Flow
-Navigator. Select the **Add or create design sources** and click **next**. Click the **green plus** button
-and add the file. Add the .txt file and click **finish**.
+Create the logic in a document and save it as a .txt file. Then click on Add Sources under the Flow Navigator. Select the Add or create design sources and click next. Click the green plus button and add the file. Add the .txt file and click finish.
 
 We can run Simulation to check the code by clicking the Run Simulation under SIMULATION and choosing the first Run Behavioral Simulation.
 
 **ROM_comparator_tb.v**
 ```verilog
 // Testbench for the ROM-based 2-bit comparator
-module lab3_3_1_tb;
+module ROM_comparator_tb;
 
     // Testbench signals
-    reg clk;             // Clock signal
     reg [1:0] a, b;      // Inputs to the comparator (2-bit each)
     wire Lt, Eq, Gt;     // Outputs from the comparator: Less than, Equal, Greater than
 
     // Instantiate the Device Under Test (DUT)
     lab3_3_1 DUT(
-        .clk(clk),       // Connect the clock signal to the DUT
         .a(a),           // Connect input 'a' to the DUT
         .b(b),           // Connect input 'b' to the DUT
         .Lt(Lt),         // Connect 'Lt' output from the DUT
@@ -570,38 +566,24 @@ module lab3_3_1_tb;
         .Gt(Gt)          // Connect 'Gt' output from the DUT
     );
 
-    // Clock generation
-    initial begin
-        clk = 1;                       // Initialize clock signal
-        forever #5 clk = ~clk;         // Generate a clock with a period of 10 time units (toggle every 5 units)
-    end
-
     integer i;  // Loop counter variable
 
     // Test sequence
     initial begin
-        #5; // Short delay before starting the test sequence
-        
-        // Loop to test all possible combinations of inputs 'a' and 'b'
-        // Each combination represents 4-bit input {a, b} (a[1:0], b[1:0])
-        for (i = 0; i < 16; i = i + 1) begin 
-            #5;               // Wait for a few time units
-            {a, b} = i;       // Assign 'i' value to combined inputs 'a' and 'b'
-            #5;               // Wait for the next clock edge to evaluate the DUT
-        end
-    end
-
-    // Monitoring changes
-    initial begin
-        // Print the values of inputs and outputs whenever they change
-        // $monitor automatically updates and prints values at each time step
-        $monitor("Time: %t | a: %b, b: %b | Lt: %b, Eq: %b, Gt: %b",
+        // Display header
+        $display("Time: %t | a: %b, b: %b | Lt: %b, Eq: %b, Gt: %b", 
                  $time, a, b, Lt, Eq, Gt);
+
+        // Loop to test all possible combinations of inputs 'a' and 'b'
+        for (i = 0; i < 16; i = i + 1) begin 
+            #5;               // Small delay to stabilize input changes
+            {a, b} = i;       // Assign 'i' value to combined inputs 'a' and 'b'
+            #5;               // Wait for the combinational logic to produce output
+        end
+
+        // Stop the simulation after all combinations have been tested
+        #20 $stop;
     end
-
-endmodule
-
-
 ```
 
 The simulation result is shown below:
