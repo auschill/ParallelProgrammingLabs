@@ -469,7 +469,6 @@ Create and add the Verilog module with two inputs (a, b) and three outputs (lt, 
 **lab3_3_1.v**
 ```verilog
 module lab3_3_1(
-    input clk,
     input [1:0] a, // 2-bit input a
     input [1:0] b, // 2-bit input b
     output reg Lt, // a < b
@@ -477,53 +476,46 @@ module lab3_3_1(
     output reg Gt  // a > b
 );
 
-    // Temporary storage for ROM address and data
-    wire [3:0] addr_reg; // Storage for combined address
-    wire [2:0] douta;  // Data output from ROM
+    reg [2:0] ROM[15:0]; // Define a ROM with enough space
+    wire [3:0] addr; // Combined address from A and B
 
-    // Instance of ROM
-    rom_data rom (
-      .clka(clk),        // Clock input
-      .addra(addr_reg),  // Address input (synchronized with clk)
-      .douta(douta)      // Data output
-    );
+    assign addr = {a, b}; // Combine A and B to form ROM address
 
-    // Synchronize address changes with the clock
+   initial begin
+        $readmemb("C:/all/Verilog_labs/lab3/project_2/ROM_data.txt", ROM); // Load ROM content from file
+// please correct the absolute path to the ROW_data.txt file, the above is mine and will not work for yours
+    end
 
-     assign   addr_reg = {a, b}; // Update address register on clock edge
-
-
-    // Update comparison results based on ROM output, synchronously with the clock
     always @(*) begin
-        case (douta)
-            3'b001: begin // Case where a == b
+        case (ROM[addr])
+            3'b001: begin // a == b
                 Lt = 0;
                 Eq = 1;
                 Gt = 0;
             end
-            3'b010: begin // Case where a < b
+            3'b010: begin // a < b
                 Lt = 1;
                 Eq = 0;
                 Gt = 0;
             end
-            3'b100: begin // Case where a > b
+            3'b100: begin // a > b
                 Lt = 0;
                 Eq = 0;
                 Gt = 1;
             end
-            default: begin // Default case for safety (should not normally occur)
+            default: begin // Default case for safety
                 Lt = 0;
                 Eq = 0;
                 Gt = 0;
             end
         endcase
     end
-    
+
 endmodule
 
+
+
 ```
-
-
 
 Create and add a text file that describes the design output.
 
@@ -552,10 +544,7 @@ a and b are concatenated to form a 4-bit address (addr), which is used to access
 001
 
 ```
-
-Create the logic in a document and save it as a .**txt** file. Then click on **Add Sources** under the Flow
-Navigator. Select the **Add or create design sources** and click **next**. Click the **green plus** button
-and add the file. Add the .txt file and click **finish**.
+Create the logic in a document and save it as a .txt file. Then click on Add Sources under the Flow Navigator. Select the Add or create design sources and click next. Click the green plus button and add the file. Add the .txt file and click finish.
 
 We can run Simulation to check the code by clicking the Run Simulation under SIMULATION and choosing the first Run Behavioral Simulation.
 
@@ -564,53 +553,37 @@ We can run Simulation to check the code by clicking the Run Simulation under SIM
 // Testbench for the ROM-based 2-bit comparator
 module ROM_comparator_tb;
 
-    // Input signals for the comparator are declared as regs so they can be driven by the testbench.
-    reg [1:0] a;          // First 2-bit input for the comparator
-    reg [1:0] b;          // Second 2-bit input for the comparator
-    reg clk;
-    // Output signals from the comparator are declared as wires since they are driven by the ROM_comparator module.
-    wire Lt; // Output indicating whether a < b
-    wire Eq; // Output indicating whether a == b
-    wire Gt; // Output indicating whether a > b
+    // Testbench signals
+    reg [1:0] a, b;      // Inputs to the comparator (2-bit each)
+    wire Lt, Eq, Gt;     // Outputs from the comparator: Less than, Equal, Greater than
 
-    // Instantiate the Device Under Test (DUT) with named port mapping
+    // Instantiate the Device Under Test (DUT)
     lab3_3_1 DUT(
-        .clk(clk),
-        .a(a), 
-        .b(b),
-        .Lt(Lt),
-        .Eq(Eq),
-        .Gt(Gt)
+        .a(a),           // Connect input 'a' to the DUT
+        .b(b),           // Connect input 'b' to the DUT
+        .Lt(Lt),         // Connect 'Lt' output from the DUT
+        .Eq(Eq),         // Connect 'Eq' output from the DUT
+        .Gt(Gt)          // Connect 'Gt' output from the DUT
     );
 
+    integer i;  // Loop counter variable
+
     // Test sequence
-    integer i; // Variable for loop iteration
     initial begin
-        // Print header for readability in simulation output
-        $display("Comparing all possible combinations of 'a' and 'b':");
-        $display("A B | Lt Eq Gt");
-        $display("-------------");
-        clk =0;
-        // Loop through all possible combinations of 'a' and 'b'
-        for (i = 0; i < 16; i = i + 1) begin
-            #10;
-            {a, b} = i;  // Assign combination of 'a' and 'b' based on loop iteration
-            #10;         // Wait 10 time units to observe the outputs
+        // Display header
+        $display("Time: %t | a: %b, b: %b | Lt: %b, Eq: %b, Gt: %b", 
+                 $time, a, b, Lt, Eq, Gt);
+
+        // Loop to test all possible combinations of inputs 'a' and 'b'
+        for (i = 0; i < 16; i = i + 1) begin 
+            #5;               // Small delay to stabilize input changes
+            {a, b} = i;       // Assign 'i' value to combined inputs 'a' and 'b'
+            #5;               // Wait for the combinational logic to produce output
         end
 
-        // End simulation after all cases are tested
-       
+        // Stop the simulation after all combinations have been tested
+        #20 $stop;
     end
-
-    // Optional: Monitor changes in variables
-    // This helps in observing the behavior of the DUT for different input combinations
-    initial begin
-        clk <= 1'd0;
-        $monitor("At time %t, A = %b, B = %b | Lt = %b, Eq = %b, Gt = %b",
-                 $time, a, b, Lt, Eq, Gt);
-    end
-always #10 clk <= ~ clk;
-endmodule
 ```
 
 The simulation result is shown below:
