@@ -385,7 +385,7 @@ module ROM_4x2 (ROM_data, ROM_addr);
  reg [1:0] ROM [3:0]; // defining 4x2 ROM
  assign ROM_data = ROM[ROM_addr]; // reading ROM content at the address
 ROM_addr
- initial $readmemb (“ROM_data.txt”, ROM, 0, 3); // load ROM content from
+ initial $readmemb ("ROM_data.txt", ROM, 0, 3); // load ROM content from
 ROM_data.txt file
 endmodule 
 ```
@@ -778,18 +778,15 @@ module lab3_3_2(
     wire [3:0] address;
     assign address = {a, b};
 
-    // 4-bit register to hold the product from ROM
-//    reg [3:0] product_reg;
-//    assign product = product_reg; // Assign the registered value to the output
-
     // ROM for storing pre-computed products, 16x4 bits
     reg [3:0] ROM[15:0];
 
     // Initialize ROM with pre-computed products using $readmemb system task
     initial begin
-        $readmemb("ROM_data.txt", ROM);
-    end
-    assign product = ROM[address];
+	$readmemb("C:/all/Verilog_labs/lab3/project_2/ROM_data.txt", ROM); // Load ROM content from file
+// please correct the absolute path to the ROW_data.txt file, the above is mine and will not work for yours
+   end
+   assign product = ROM[address];
     // Retrieve product from ROM based on the current address
   
 endmodule
