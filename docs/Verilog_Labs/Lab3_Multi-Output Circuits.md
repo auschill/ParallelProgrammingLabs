@@ -778,10 +778,6 @@ module lab3_3_2(
     wire [3:0] address;
     assign address = {a, b};
 
-    // 4-bit register to hold the product from ROM
-//    reg [3:0] product_reg;
-//    assign product = product_reg; // Assign the registered value to the output
-
     // ROM for storing pre-computed products, 16x4 bits
     reg [3:0] ROM[15:0];
 
