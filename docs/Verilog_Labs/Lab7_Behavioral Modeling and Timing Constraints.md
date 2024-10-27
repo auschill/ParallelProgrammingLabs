@@ -361,8 +361,8 @@ the finite state machine. The syntax of the ```case``` statement is:
 ```verilog
 case [ case_expression]
  case_item_expr [, case_item_expression] : procedural_statement
-''''
-''''
+....
+....
  [ default: procedural_statement ]
 endcase 
 ```
