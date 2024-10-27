@@ -42,15 +42,15 @@ usage.
 module HAS_TASK;
  parameter MAXBITS = 8;
  task REVERSE_BITS; // task definition starts here
- input [MAXBITS – 1 : 0] DIN;
- output [MAXBITS – 1 : 0] DOUT;
+ input [MAXBITS - 1 : 0] DIN;
+ output [MAXBITS - 1 : 0] DOUT;
  integer k;
  begin
  for (k=0; k < MAXBITS; k = k +1)
  DOUT[MAXBITS-k] = DIN[k];
  end
  endtask // task definition ends here
- reg [MAXBITS – 1] REG_X, NEW_REG;
+ reg [MAXBITS - 1] REG_X, NEW_REG;
  always @ (REG_X)
  REVERSE_BITS(REG_X,NEX_REG); // task being called
 endmodule 
@@ -71,7 +71,7 @@ list, the entire argument list is displayed.
 
 ```verilog
 initial
- $monitor(“At %t, D= %d, CLK = %d”, $time, D, CLK, “and Q is %b”, Q); 
+ $monitor("At %t, D= %d, CLK = %d", $time, D, CLK, "and Q is %b", Q); 
 ```
 Note that the argument list values are printed in the ```$display``` task whenever it is called, whereas in the
 ```$monitor``` task gets printed whenever the value of one of the arguments changes. 
@@ -297,10 +297,10 @@ of an assignment statement. Here is an example of a function definition and call
 ```verilog
 module HAS_FUNCTION(X_IN, REV_X);
  parameter MAXBITS = 8;
- output reg [MAXBITS – 1 : 0] REV_X;
- input [MAXBITS – 1 : 0] X_IN;
- function [MAXBITS – 1 : 0] REVERSE_BITS; // function definition starts here
- input [MAXBITS – 1 : 0] DIN;
+ output reg [MAXBITS - 1 : 0] REV_X;
+ input [MAXBITS - 1 : 0] X_IN;
+ function [MAXBITS - 1 : 0] REVERSE_BITS; // function definition starts here
+ input [MAXBITS - 1 : 0] DIN;
  integer k;
  begin
  for (k=0; k < MAXBITS; k = k +1)
