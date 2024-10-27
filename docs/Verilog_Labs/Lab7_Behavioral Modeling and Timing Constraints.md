@@ -103,7 +103,7 @@ the code's behavior. Another kind of delay, an intra-statement, is used to
 model the transport delay using the assignment statement. Here is an example of it: 
 
 ```verilog
-DONE = #5 1’b1: 
+DONE = #5 1'b1: 
 ```
 
 In this statement, the intra-statement delay value is mentioned on the right side of the assignment
@@ -361,8 +361,8 @@ the finite state machine. The syntax of the ```case``` statement is:
 ```verilog
 case [ case_expression]
  case_item_expr [, case_item_expression] : procedural_statement
- …
- …
+''''
+''''
  [ default: procedural_statement ]
 endcase 
 ```
@@ -603,11 +603,11 @@ The waveform option can create clocks of a non-50% duty cycle and/or phase-delay
 signal. 
 
 ```verilog
-create_clock –name CLK –period 10.0 –waveform (0 5.0) [get_ports CLK]
-set_input_delay –clock CLK –max 3.0 [all_inputs]
-set_input_delay –clock CLK –min 1.0 [all_inputs]
-set_output_delay –clock CLK 2.0 [all_outputs]
-set_max_delay 5.0 –from [get_ports CDATA] –to [get_ports OUT2] 
+create_clock -name CLK -period 10.0 -waveform (0 5.0) [get_ports CLK]
+set_input_delay -clock CLK -max 3.0 [all_inputs]
+set_input_delay -clock CLK -min 1.0 [all_inputs]
+set_output_delay -clock CLK 2.0 [all_outputs]
+set_max_delay 5.0 -from [get_ports CDATA] -to [get_ports OUT2] 
 ```
 
 Note that the clock period is defined at 10 ns. This is applied throughout the example for consistency.
