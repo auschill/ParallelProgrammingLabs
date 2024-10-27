@@ -52,7 +52,7 @@ For example,
 ```verilog
 module FA;
 parameter AND_DELAY=2, XOR_DELAY=3;
-… //gate-level model which uses AND_DELAY and XOR_DEALY in the gate instantiations
+...//gate-level model which uses AND_DELAY and XOR_DEALY in the gate instantiations
 endmodule
 module FA2BIT( ports listing);
 FA #(4,5) f1(ports connections); // AND_DELAY will be 4 and XOR_DELAY will be 5
