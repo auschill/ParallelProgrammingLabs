@@ -669,8 +669,7 @@ endmodule
 
 Model the D flip-flop with synchronous reset using behavioral modeling.
 Develop a testbench to test (generate input as shown) and validate the
-design. Simulate the design. Assign D input to BTN0, reset to BTN1, Clk to
-SW15, and output Q to LED0. Verify the design in hardware.
+design. Simulate the design.
 
 <div align=center><img src="imgs/v1/47.png" alt="drawing" width="600"/></div>
 
@@ -752,6 +751,10 @@ We can run a Simulation to check the code by clicking the Run Simulation under t
 
 <div align=center><img src="imgs/v1/48.png" alt="drawing" width="600"/></div>
 
+Verify the design in hardware. Assign D input to BTN0, reset to BTN3, Clk to
+H16, and output Q to LED0. And you can see the more information about the [Pin layout](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/Verilog_Labs/Lab1_Modeling_Concepts.html)
+
+<div align=center><img src="imgs/v1/add_information.png" alt="drawing" width="600"/></div>
 
 ### Part5-2-4
 
