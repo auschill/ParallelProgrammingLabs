@@ -383,10 +383,11 @@ module ROM_4x2 (ROM_data, ROM_addr);
  output [1:0] ROM_data;
  input [1:0] ROM_addr;
  reg [1:0] ROM [3:0]; // defining 4x2 ROM
- assign ROM_data = ROM[ROM_addr]; // reading ROM content at the address
-ROM_addr
- initial $readmemb ("ROM_data.txt", ROM, 0, 3); // load ROM content from
-ROM_data.txt file
+ assign ROM_data = ROM[ROM_addr]; // reading ROM content at the ROM_addr address
+
+ initial $readmemb ("ROM_data.txt", ROM, 0, 3); // load ROM content from ROM_data.txt file
+//please correct the absolute path to the ROW_data.txt file, the above is mine and will not work for yours
+
 endmodule 
 ```
 
@@ -493,15 +494,15 @@ module lab3_3_1(
                 Eq = 1;
                 Gt = 0;
             end
-            3'b010: begin // a < b
-                Lt = 1;
-                Eq = 0;
-                Gt = 0;
-            end
-            3'b100: begin // a > b
+            3'b010: begin // a > b
                 Lt = 0;
                 Eq = 0;
                 Gt = 1;
+            end
+            3'b100: begin // a < b
+                Lt = 1;
+                Eq = 0;
+                Gt = 0;
             end
             default: begin // Default case for safety
                 Lt = 0;
