@@ -472,7 +472,7 @@ c_counter_binary_0 your_instance_name (
   .Q(q)      // output wire [1 : 0] Q
 );
 
-
+endmodule
 
 ```
 
