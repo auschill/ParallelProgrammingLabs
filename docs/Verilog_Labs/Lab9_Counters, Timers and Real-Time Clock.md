@@ -456,7 +456,7 @@ resource. Go through the design flow, generate the bitstream and fill out the fo
 
 <div align=center><img src="imgs/v2/46.png" alt="drawing" width="600"/></div>
 
-**lab9_2_1.v**
+**lab9_2_3.v**
 ```verilog
 module instantiate_counter(
             input clk,
