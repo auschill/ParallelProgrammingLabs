@@ -623,6 +623,12 @@ def seven_segment(number):
 led=overlay.leds_gpio
 #define the leds_gpio, and then we can read the values of the LEDs
 ```
+
+Hint: If you run the above code and have the prblems, pleace run ```overlay?``` and check the version of the python. For the python3.6, you need to run the below code and it will work.
+
+```python
+led=overlay.axi_gpio_0
+```
 If you press the third button, which means the input data is 4, then the three LEDs will be on, which means the value is e
 
 <div align=center><img src="imgs/v1/22.png" alt="drawing" width="200"/></div>
