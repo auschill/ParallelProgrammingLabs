@@ -146,11 +146,11 @@ module MUX_multiplicand #(parameter N = 8)(
     // Combinational logic to select the output based on the select signal.
     always @(*) begin
         case(sel)
-            3'b000: y <= x1; // Selects +0 multiplicand, often used for no operation.
-            3'b001: y <= x2; // Selects +1 multiplicand, equivalent to the original number.
-            3'b101: y <= x3; // Selects -1 multiplicand, which is the negated original number.
-            3'b010: y <= x4; // Selects +2 multiplicand, double the original number.
-            3'b110: y <= x5; // Selects -2 multiplicand, negated and double the original number.
+            3'b000: y = x1; // Selects +0 multiplicand, often used for no operation.
+            3'b001: y = x2; // Selects +1 multiplicand, equivalent to the original number.
+            3'b101: y = x3; // Selects -1 multiplicand, which is the negated original number.
+            3'b010: y = x4; // Selects +2 multiplicand, double the original number.
+            3'b110: y = x5; // Selects -2 multiplicand, negated and double the original number.
             // Note: Other case values like 3'b011, 3'b100, and 3'b111 are not covered.
             // Depending on the design, you may want to handle these undefined states.
         endcase    
@@ -185,15 +185,15 @@ module adder #(parameter N = 8)(
     always @(*) begin
         // Check combinations of the most significant bits (MSBs) of inputs for sign extension.
         if (x0[N-1] == 1'b1 & x1[N-1] == 1'b1)
-            extend <= 1'b1;  // Both MSBs are 1, indicating potential overflow for positive numbers.
+            extend = 1'b1;  // Both MSBs are 1, indicating potential overflow for positive numbers.
         else if (x0[N-1] == 1'b0 & x1[N-1] == 1'b0)
-            extend <= 1'b0;  // Both MSBs are 0, with no overflow for positive numbers.
+            extend = 1'b0;  // Both MSBs are 0, with no overflow for positive numbers.
         else if (x0[N-1] == 1'b1 & x1[N-1] == 1'b0)
-            extend <= y[N-1];  // Mixed MSBs, check MSB of result for overflow indication.
+            extend = y[N-1];  // Mixed MSBs, check MSB of result for overflow indication.
         else if (x0[N-1] == 1'b0 & x1[N-1] == 1'b1)
-            extend <= y[N-1];  // Mixed MSBs, check MSB of result for overflow indication.
+            extend = y[N-1];  // Mixed MSBs, check MSB of result for overflow indication.
         else
-            extend <= 1'b0;  // Default case, should logically never occur due to covered cases.
+            extend = 1'b0;  // Default case, should logically never occur due to covered cases.
     end
 
 endmodule
@@ -216,9 +216,9 @@ module RESET #(
 	always @(*) 
 	begin
 		if (s == 1'b1)
-			y <= x1;  // If reset signal 's' is high, load 'x1' into the output 'y'.
+			y = x1;  // If reset signal 's' is high, load 'x1' into the output 'y'.
 		else if (s == 1'b0)
-			y <= 0;   // If reset signal 's' is low, clear the output 'y'.
+			y = 0;   // If reset signal 's' is low, clear the output 'y'.
 	end
 	
 endmodule
@@ -344,29 +344,29 @@ module CTRL #(
             RESET: begin  // In RESET state...
                 if (start == 1'b1) begin
                     next_state = COUNT;  // Move to COUNT state if start is high.
-                    busy <= 1'b1;  // Indicate that machine is busy.
-                    done <= 1'b0;  // Not done yet.
+                    busy = 1'b1;  // Indicate that machine is busy.
+                    done = 1'b0;  // Not done yet.
                 end else begin
                     next_state = RESET;  // Stay in RESET if start is not high.
-                    busy <= 1'b0;  // Indicate machine is not busy.
-                    done <= 1'b0;  // Not done as we are in reset.
+                    busy = 1'b0;  // Indicate machine is not busy.
+                    done = 1'b0;  // Not done as we are in reset.
                 end
             end
             COUNT: begin  // In COUNT state...
                 if (alarm == 1'b0) begin
                     next_state = RESET;  // Return to RESET state if alarm is low.
-                    busy <= 1'b1;  // Still busy as we were counting.
-                    done <= 1'b1;  // Indicate completion as we leave COUNT state.
+                    busy = 1'b1;  // Still busy as we were counting.
+                    done = 1'b1;  // Indicate completion as we leave COUNT state.
                 end else begin
                     next_state = COUNT;  // Stay in COUNT state if alarm is high.
-                    busy <= 1'b1;  // Indicate machine is busy.
-                    done <= 1'b0;  // Not done as counting continues.
+                    busy = 1'b1;  // Indicate machine is busy.
+                    done = 1'b0;  // Not done as counting continues.
                 end
             end
             default: begin  // In default case...
                 next_state = RESET;  // Return to RESET for any undefined states.
-                busy <= 1'b0;  // Not busy in undefined state.
-                done <= 1'b0;  // Not done as this is an unexpected state.
+                busy = 1'b0;  // Not busy in undefined state.
+                done = 1'b0;  // Not done as this is an unexpected state.
             end
         endcase
     end
@@ -374,35 +374,35 @@ module CTRL #(
     // Output logic for control signals based on current state.
     always @(*) begin
         if (rst == 1'b0) begin  // If in reset...
-            loadReg <= 1'b1;  // Prepare to load data.
-            addReg <= 1'b0;  // No addition.
-            shiftReg <= 1'b0;  // No shifting.
-            tick <= 1'b0;  // No tick signal.
+            loadReg = 1'b1;  // Prepare to load data.
+            addReg = 1'b0;  // No addition.
+            shiftReg = 1'b0;  // No shifting.
+            tick = 1'b0;  // No tick signal.
         end else begin
             case (state)
               RESET: 
 		begin		
 			if (start == 1'b1)
-				loadReg 	<= 1'b1;
+				loadReg 	= 1'b1;
 			else
-				loadReg 	<= 1'b0;
-			addReg 	<= 1'b0;
-			shiftReg <= 1'b0;
-			tick 	<= 1'b0;					
+				loadReg 	= 1'b0;
+			addReg 	= 1'b0;
+			shiftReg = 1'b0;
+			tick 	= 1'b0;					
 		end
 		COUNT: 
 		begin
-			loadReg 	<= 1'b0;
-			addReg 	<= 1'b1;
-			shiftReg <= 1'b1;
-			tick 	<= ~clk;
+			loadReg  = 1'b0;
+			addReg 	= 1'b1;
+			shiftReg = 1'b1;
+			tick 	= ~clk;
 		end
 		default: 
 			begin
-			loadReg 	<= 1'b0;
-			addReg 	<= 1'b0;
-			shiftReg <= 1'b0;
-			tick 	<= 1'b0;
+			loadReg  = 1'b0;
+			addReg 	= 1'b0;
+			shiftReg = 1'b0;
+			tick 	= 1'b0;
 			end
 	endcase	
 	end
@@ -424,25 +424,25 @@ module MUX_recoded(
     always @(*) begin
         case (mul_data)
             // No change needed: Represents multiplication by 0.
-            3'b000: recoded_data <= 3'b000; // +0
+            3'b000: recoded_data = 3'b000; // +0
 
             // Standard positive multipliers: Represents multiplication by +1.
-            3'b001: recoded_data <= 3'b001; // +1
-            3'b010: recoded_data <= 3'b001; // +1 (redundant, but aligns with Booth for certain implementations)
+            3'b001: recoded_data = 3'b001; // +1
+            3'b010: recoded_data = 3'b001; // +1 (redundant, but aligns with Booth for certain implementations)
 
             // Special case for handling +2 (not typically standard Booth but may represent a double operation).
-            3'b011: recoded_data <= 3'b010; // +2
+            3'b011: recoded_data = 3'b010; // +2
 
             // Negative multipliers: Represents multiplication by -1.
-            3'b100: recoded_data <= 3'b110; // -2 (In two's complement, '110' represents -2)
-            3'b101: recoded_data <= 3'b101; // -1
-            3'b110: recoded_data <= 3'b101; // -1 (redundant, but aligns with Booth for certain implementations)
+            3'b100: recoded_data = 3'b110; // -2 (In two's complement, '110' represents -2)
+            3'b101: recoded_data = 3'b101; // -1
+            3'b110: recoded_data = 3'b101; // -1 (redundant, but aligns with Booth for certain implementations)
 
             // Represents a return to zero or no operation needed at the end of a cycle.
-            3'b111: recoded_data <= 3'b000; // +0
+            3'b111: recoded_data = 3'b000; // +0
             
             // Default cases can be added if required, especially for handling unexpected inputs.
-            // default: recoded_data <= 3'bxxx; // Undefined or X state for illegal inputs.
+            // default: recoded_data = 3'bxxx; // Undefined or X state for illegal inputs.
         endcase    
     end
 endmodule
