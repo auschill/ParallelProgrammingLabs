@@ -499,7 +499,7 @@ module Bitpair_Mult #(
         .din({multiplier,1'b0}),    // Initialize with multiplier and an added zero bit.
         .dout(product_0)
     );	
-
+    wire [N:0] x3;
     // Compute complementary version of the multiplicand for subtraction.
     assign x3 = (multiplican_save[N-1] == 1'b1) ? {1'b0, ~multiplican_save} : {1'b1, ~multiplican_save};	
 
