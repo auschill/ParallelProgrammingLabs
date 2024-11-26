@@ -1021,7 +1021,7 @@ else:
     # If the number is positive, just convert it directly
     signed_decimal = int(binary_str, 2)
 
-seven_segment(signed_decimal)```
+seven_segment(signed_decimal)
 ```
 <div align=center><img src="imgs/v2/35.png" alt="drawing" width="400"/></div>
 
