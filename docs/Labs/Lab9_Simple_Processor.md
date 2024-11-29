@@ -765,6 +765,9 @@ The block design is shown below:
 
 
 For the value of ```reg0``` ```reg1``` ```reg2``` ```Bus_data``` ports can be read from the ```AXI_GPIO``` IP, and we need to write data to the ```run``` ```DIN``` input ports by ```AXI_GPIO``` and the ```key``` port will map to the button(L19) and the ```Done``` port will map to the LED(M14) of the board.
+Please noted that for the AXI_GPIO IP, we just need one port for the ```GPIO``` and need to select the ```All Outputs``` or ```All Inputs``` option according to the need  like below:
+
+<div align=center><img src="imgs/v2/lab9.png" alt="drawing" width="800"/></div>
 
 ### Download the bitstream file to PYNQ
 
