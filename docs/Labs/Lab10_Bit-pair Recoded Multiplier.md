@@ -777,6 +777,9 @@ The multiplicand is 6 and the multiplier is 5, then the result is 00111110, whic
 
 The multiplicand is -6 and the multiplier is -5, then the result is 30.
 
+For the showing the real data we want, you can set the radix to the signed like below:
+
+<div align=center><img src="imgs/v2/show_data.png" alt="drawing" width="800"/></div>
 
 ### Implementation
 
