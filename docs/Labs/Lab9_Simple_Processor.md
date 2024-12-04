@@ -746,7 +746,9 @@ initial begin
     #20;
     clk	 		<=	1'b1;
     #20;
-        
+end
+
+endmodule
 
 ```
 
