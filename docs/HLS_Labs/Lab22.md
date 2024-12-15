@@ -350,8 +350,8 @@ from pynq import Overlay
 from pynq import allocate
 import numpy as np
 overlay = Overlay('design_1.bit')
-overlay?
 ```
+We can use the ```overlay?``` to check the IP dictionary.
 
 <div align=center><img src="Images/19/24.png" alt="drawing" width="800"/></div>
 
