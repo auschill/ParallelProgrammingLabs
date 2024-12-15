@@ -406,7 +406,7 @@ from pynq import Overlay
 from pynq import allocate
 import numpy as np
 hw = Overlay("design_1_wrapper.bit")
-hw?
+hw ?
 ```
 We can use the ```?``` to check the IP dictionary.
 
