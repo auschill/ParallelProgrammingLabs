@@ -186,7 +186,6 @@ void example(int *a){
 #pragma HLS INTERFACE m_axi depth=50 port=a offset=direct
 ...
 }
-
 ```
 
 **Slave Mode**: The slave mode for an interface is set with ```offset=slave```. In this mode, the IP will be controlled by the host application or the microcontroller through the ```s_axilite``` interface. This is the default for both the Vitis kernel flow and the Vivado IP flow. Here is the flow of operation:
@@ -249,7 +248,6 @@ void vadd(const unsigned int *in1, // Read-Only Vector 1
 #pragma HLS INTERFACE mode=s_axilite port=out
 #pragma HLS INTERFACE mode=s_axilite port=size
 #pragma HLS INTERFACE mode=s_axilite port=return
-
 ```
 
 <div align=center><img src="Images/11_2.png" alt="drawing" width="600"/></div>
@@ -400,8 +398,9 @@ import numpy as np
 import pynq
 from pynq import MMIO
 overlay = pynq.Overlay('design_1.bit')
-overlay?
 ```
+We can use the ```overlay?``` to check the IP dictionary
+
 <div align=center><img src="Images/9_12.png" alt="drawing" width="700"/></div>
 
 #### Allocate DMA memory address size
