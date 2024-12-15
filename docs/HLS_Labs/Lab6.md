@@ -227,7 +227,6 @@ import time
 We can create three DMA objects using the labels for the DMAs listed above.
 
 ```python
-
 hw = Overlay('design_1.bit')
 mm2s_0 = hw.axi_dma_0.sendchannel
 mm2s_1 = hw.axi_dma_1.sendchannel
@@ -278,7 +277,6 @@ s2mm_0.wait()
 s2mm_1.wait()
 s2mm_3.wait()
 s2mm_2.wait()
-
 ```
 
 We will see:
@@ -327,20 +325,12 @@ And we can have an example as shown below:
 #define _STABLE_TEST_H
 
 #define N 8
-
 void dataflow_region(int A[N],int in1[N],int in2[N],int out1[N]);
-
-
 #endif
-
-
 ```
 **stable_test.cpp**
 ```c++
 #include"stable_test.h"
-
-
-
 void add(int a[N],int b[N],int sum[N])
 {
 	for(int i=0;i<N;i++)
@@ -348,8 +338,6 @@ void add(int a[N],int b[N],int sum[N])
 		sum[i]=a[i]+b[i];
 	}
 }
-
-
 
 void dataflow_region(int A[N],int in1[N],int in2[N],int out1[N])
 {
@@ -359,7 +347,6 @@ void dataflow_region(int A[N],int in1[N],int in2[N],int out1[N])
     add(in1,in2,sum1);
     add(A,sum1,out1 );
 }
-
 ```
 **stable_tb.cpp**
 ```c++
@@ -385,7 +372,6 @@ int main(){
 		printf("sum[%d] is %d\r\n",j,sum[j]);
 	}
 }
-
 ```
 
 After run the Cosimulation,we can see that:
@@ -500,7 +486,6 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
-
 ```
 The dataflow view is shown below.
 
@@ -512,7 +497,6 @@ Scalar values are passed by reference:
 
 ```c++
 void test(hls::stream<int> &in, hls::stream<int> &out, int &n)
-
 ```
 
 The following is an example of an ```hls::task``` design with a stable by-reference scalar argument, whose behavior is by and large insensitive to the exact timing of a change of value of that argument:
@@ -524,12 +508,10 @@ The following is an example of an ```hls::task``` design with a stable by-refere
 #include <iostream>
 
 void test(hls::stream<int>& in, hls::stream<int>& out, int n);
-
 ```
 
 **test.cpp**
 ```c++
-
 #include "test.h"
 
 void sub_task1(hls::stream<int>& in, hls::stream<int>& out) {
@@ -575,8 +557,8 @@ void test(hls::stream<int>& in, hls::stream<int>& out, int n) {
     HLS_TASK t2(sub_task2, s1, s2);
     HLS_TASK t(task2, s2, out, n);
 }
-
 ```
+
 ```pragma HLS stable``` : Arguments marked as stable cannot change during kernel execution. Inputs that only change when the kernel is not running, such as ports that provide configuration data, should be marked with a ```STABLE``` pragma or directive. The ```STABLE``` Pragma can only be used for Control-Driven task modeling because in Data-driven Task-level Parallelism there is no way to detect when the kernel is idle.
 
 The ```STABLE``` pragma informs Vitis HLS of the following:
@@ -644,7 +626,6 @@ import time
 We can create three DMA objects using the labels for the DMAs listed above.
 
 ```python
-
 hw = Overlay('design_1.bit')
 mm2s = hw.axi_dma_0.sendchannel
 s2mm = hw.axi_dma_0.recvchannel
@@ -667,7 +648,6 @@ for i in range(N):
 register_n.register_map
 
 register_n.register_map.n=100
-
 ```
 For a single variable ```n```, we assign its value by defining it as an ```s_axilite``` interface, as shown in the following diagram.
 
