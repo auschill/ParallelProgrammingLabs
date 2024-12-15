@@ -127,8 +127,9 @@ import numpy as np
 import pynq
 from pynq import MMIO
 hw = pynq.Overlay('design_1.bit')
-hw?
 ```
+We can use the ```hw?``` to check the IP dictionary
+
 <div align=center><img src="Images/13/3.png" alt="drawing" width="400"/></div>
 
 

@@ -276,6 +276,8 @@ from pynq import MMIO
 overlay = pynq.Overlay('design_1.bit')
 overlay?
 ```
+We can use the ```overlay?``` to check the IP dictionary.
+
 <div align=center><img src="Images/12_18.png" alt="drawing" width="400"/></div>
 
 

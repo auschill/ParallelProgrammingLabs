@@ -911,7 +911,7 @@ int main() {
 ```
 
 **rtl_model.v**
-```c++
+```verilog
 `timescale 100ps/100ps
 
 (* use_dsp = "simd" *)
