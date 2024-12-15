@@ -483,13 +483,11 @@ Here, we can additionally generate a ```middle_data``` IP to provide the last an
 #ifndef _MIDDLE_H
 #define _MIDDEL_H
 
-
 #include <stdio.h>
 #include "hls_stream.h"
 #include <assert.h>
 #include <ap_fixed.h>
 #include <ap_axi_sdata.h>
-
 
 #define num 5
 
@@ -498,13 +496,7 @@ Here, we can additionally generate a ```middle_data``` IP to provide the last an
 typedef hls::axis<int,0,0,0> data_t_pack;
 typedef hls::stream<data_t_pack> d_stream;
 
-
-
 void middle_data(d_stream &indata,d_stream &outdata);
-
-
-
-
 
 #endif
 ```
@@ -545,8 +537,6 @@ static int counter=0;
 
 	}
 	outdata.write(valueout);
-
-
 }
 
 ```
@@ -609,7 +599,6 @@ import time
 Using the labels for the DMAs listed above, we can create three DMA objects.
 
 ```python
-
 hw = Overlay('design_1.bit')
 mm2s = hw.axi_dma_0.sendchannel
 s2mm_1 = hw.axi_dma_1.recvchannel
@@ -641,7 +630,6 @@ s2mm_2.transfer(iBuf_2)
 mm2s.wait()
 s2mm_1.wait()
 s2mm_2.wait()
-
 
 ```
 

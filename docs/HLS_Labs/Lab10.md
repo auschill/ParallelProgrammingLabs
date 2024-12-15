@@ -135,8 +135,9 @@ import numpy as np
 import pynq
 from pynq import MMIO
 overlay = pynq.Overlay('design_1.bit')
-overlay?
 ```
+You can check the information about the IP by ```overlay?``` and get the below.
+
 <div align=center><img src="Images/9_12.png" alt="drawing" width="700"/></div>
 
 #### Allocate DMA memory address size
