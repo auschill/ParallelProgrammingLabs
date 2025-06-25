@@ -82,10 +82,11 @@ module multiplexer_2to1(
     wire y_and_s;
 
     // Gate-level modeling of the multiplexer
-    not u1(not_s, s);           // Invert the select signal
-    and u2(x_and_not_s, x, not_s); // AND gate for x and the inverted select signal
-    and u3(y_and_s, y, s);      // AND gate for y and the select signal
-    or  u4(m, x_and_not_s, y_and_s); // OR gate to produce the final output
+    // FIX HERE
+    not u1(,);           // Invert the select signal
+    and u2(,,); // AND gate for x and the inverted select signal
+    and u3(,,);      // AND gate for y and the select signal
+    or  u4(,,); // OR gate to produce the final output
 
 endmodule
 
@@ -94,7 +95,7 @@ endmodule
 
 Now we can see the ```Schematic``` under the RTL ANALYSIS part like below:
 
-<div align=center><img src="imgs/v3/2.png" alt="drawing" width="700"/></div>
+<div align=center><img src="imgs/v5/1.png" alt="drawing" width="700"/></div>
 
 Then we can click on the Run synthesis under ```SYNTHESIS``` and Run implementation under ```IMPLEMENTATION```. We should  add the appropriate board-related master XDC file to the project and edit it to include the related pins. Assign *x* to **L20**, *y* to **D20**, and the *s* to **L19** and *m* to **R14** according to the pin layout of the PYNQ_Z2 as shown below.
 
