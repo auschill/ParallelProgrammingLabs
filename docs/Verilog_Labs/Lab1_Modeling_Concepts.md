@@ -100,6 +100,7 @@ Now we can see the ```Schematic``` under the RTL ANALYSIS part like below:
 Then we can click on the Run synthesis under ```SYNTHESIS``` and Run implementation under ```IMPLEMENTATION```. We should  add the appropriate board-related master XDC file to the project and edit it to include the related pins. Assign *x* to **L20**, *y* to **D20**, and the *s* to **L19** and *m* to **R14** according to the pin layout of the PYNQ_Z2 as shown below.
 
 <div align=center><img src="imgs/v5/1.PNG" alt="drawing" width="1000"/></div>
+<div align=center><img src="imgs/v5/2.PNG" alt="drawing" width="700"/></div>
 
 <div align=center><img src="imgs/v3/24.png" alt="drawing" width="700"/></div>
 
