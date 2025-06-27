@@ -353,7 +353,7 @@ Notice that we monitored the expected led output at 10 ns after the input is cha
 
 * Close the simulator by selecting *File > Close Simulation* without saving any changes.
 
-### Generate the Bitstream
+### Block diagram and Generating the Bitstream
 
 *Notice!* You may encounter a stuck problem. No worries, just restart the vivado and do the same operations. For more information about ZYNQ, please refer to  [Reference1](https://www.amd.com/en/products/adaptive-socs-and-fpgas/soc/zynq-7000.html) [Reference2](http://www.zynqbook.com/
 )
@@ -362,13 +362,13 @@ In order to let it work successfully, we need to add *PS* part first.
 
 * Click *Create Block design* under *IP INTEGRATOR*, then click *OK*.
 
-* Click *+ (Add IP)*, search *zynq* and choose *ZYNQ7 Processing System*.
+* Click *+ (Add IP)*, search *zynq* and choose *ZYNQ UltraScale+ MPSoC*.
 
-* Click `Run Block Automation`. Then connect the `FCLK_CLK0` and `M_AXI_GP0_ACLK` together.
+* Click `Run Block Automation`. Then connect the `pl_clk0` and `maxihpm0_lpd_aclk` together. This is allowing the PS to control the PL clock.
 
 <div align=center><img src="imgs/1_22.png" alt="drawing" width="400"/></div>
 
-* Right click `lab1` under the *Sources* window and choose `Add Module to Block Design`. In the Diagram window, you will see the *lab1_v1_0* module has been added to the block design, move the cursor to the *btn*, right click and choose *Make External*. Do the same thing on *led[3: 0]*. 
+* Right click `lab1` under the *Sources* window and choose `Add Module to Block Design`. In the Diagram window, you will see the *lab1_v1_0* module has been added to the block design, move the cursor to the *btn*, right click and choose *Make External*. Do the same thing on *led[3: 0]*. "Make External" tells the system you will be using this module with external ports, and not through the PS.
 
 <div align=center><img src="imgs/1_23.png" alt="drawing" width="600"/></div>
 
