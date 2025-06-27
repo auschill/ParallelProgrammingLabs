@@ -283,7 +283,7 @@ Click *Yes* to close the elaborated design if the dialog box is displayed.
 
 If you don't see the Project Summary tab then select *Window > Project Summary* or click the *Project Summary* icon.
 
-<div align=center><img src="imgs/1_13.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="lab_images/project)summary.PNG" alt="drawing" width="1000"/></div>
 
 Click on the various links to see what information they provide and which allows you to change the synthesis settings.
 
@@ -291,11 +291,11 @@ Click on the various links to see what information they provide and which allows
 
 Notice that there are an estimated 3 LUTs and 8 IOs (4 input and 4 output) that are used.
 
-<div align=center><img src="imgs/1_14.png" alt="drawing" width="600"/></div>
+<div align=center><img src="lab_images/utilization.PNG" alt="drawing" width="600"/></div>
 
 * In the Flow Navigator, under Synthesis (expand Open Synthesized Design if necessary), click on *Schematic* to view the synthesized design in a schematic view.
 
-<div align=center><img src="imgs/1_15.png" alt="drawing" width="800"/></div>
+<div align=center><img src="lab_images/synthesized_design.PNG" alt="drawing" width="800"/></div>
 
 Using Windows Explorer, verify that `project_1.runs (in my project)` directory is created under project1. Under the runs directory, synth_1 directory is created which holds several files related to synthesis.
 
@@ -311,21 +311,21 @@ The implementation process will be run on the synthesized design. When the proce
 
 * Select *Open implemented design* and click *OK* as we want to look at the implemented design in a Device view tab.
 
-* Click *Yes*, if promoted, to close the synthesized design. The implemented design will be opened.
+* Click *Yes*, if prompted, to close the synthesized design. The implemented design will be opened.
 
-* In the Netlist pane, select one of the nets (e.g. led_OBUF[3]) and notice that the net displayed in the X1Y2 clock region in the Device view tab (you may have to zoom in to see it).
+* In the Netlist pane, select the btn_IBUF net. Now you can see where the input comes from on the device, and they are all pointing to a CLE (configurable logic element), This is where they are processed. Then, click on led_OBUF. The arrows will be pointing the other way to the output led ports.
 
-* If it is not selected, click the *Routing Resources icon* to show routing resources. For example, I highlighted the *led_OBUF* net.
+<div align=center><img src="lab_images/input_implemented.PNG" alt="drawing" width="1000"/></div>
 
-<div align=center><img src="imgs/1_18.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="lab_images/output_implemented.PNG" alt="drawing" width="1000"/></div>
 
 * Close the implemented design view by selecting *File > Close Implemented Design*, and select the *Project Summary* tab (you may have to change to the Default Layout view) and observe the results.
 
 * Select the *Post-Implementation* tab.
 
-*Notice* that the actual resource utilization is 3 LUTs and 8 IOs. Also, it indicates that no timing constraints were defined for this design (since the design is combinational).
+*Notice* that the actual resource utilization is 3 LUTs and 8 IOs. Also, it indicates that no timing constraints were defined for this design, as well as our can see power utilization.
 
-<div align=center><img src="imgs/1_19.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="lab_images/power_util.PNG" alt="drawing" width="1000"/></div>
 
 Using the Windows Explorer, verify that *impl_1* directory is created at the same level as *synth_1* under the `project_1.runs` directory. The *impl_1* directory contains several files including the implementation report files.
 
