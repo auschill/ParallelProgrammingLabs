@@ -104,7 +104,7 @@ Generate the bitstream and program device like [Lab1](https://uri-nextlab.github
 
 Then you can press the button on the board, and you can see the LED is on like below:
 
-<div align=center><img src="imgs/v3/29.jpg" alt="drawing" width="400"/></div>
+<div align=center><img src="imgs/v5/6.jpg" alt="drawing" width="400"/></div>
 
 ### Part lab2-3-2
 
