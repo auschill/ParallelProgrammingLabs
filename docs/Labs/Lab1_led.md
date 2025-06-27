@@ -70,7 +70,7 @@ Click "Create Project"
 Name your project the appropriate name in the subfolder
 
 Select "RTL Project"
-<div align=center><img src="Vitis_HLS_Tutor/new_images/select_Rtl.PNG" alt="drawing" width="300"/></div>
+<div align=center><img src="../Vitis_HLS_Tutor/new_images/select_Rtl.PNG" alt="drawing" width="300"/></div>
 Next, you can choose to select a file already created, or create a new source file for your project. Which, you can always start a project with no files, and go in and add sources after the project is created.
 <div align=center><img src="docs/Vitis_HLS_Tutor/new_images/create_new_file.PNG" alt="drawing" width="300"/></div>
 Click Next until the "Default Part" page. There are two tabs, Parts, and Boards. Go under the boards tab, see if you see AMD AUP ZU3. Additionally, you can search the parts for `xczu3eg-sfvc784-2-e` under the parts tab if your board is not already listed. Go to Add your board file page on this site.
