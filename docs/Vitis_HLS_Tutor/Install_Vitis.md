@@ -39,7 +39,7 @@ Create your AMD account here: [AMD Account Registration](https://www.amd.com/en/
 # Get Vitis Software
 Download Vitis™ Unified Software Platform 2023.2 from Vitis Download Page. Ensure your computer is compatible. IMPORTANT -> If you wish to download/run Vitis/Vivado to your laptop/local PC.
 A couple notes
-1. It is difficult for Macbooks with ARM arch (m1, etc). Because you will need to use a virtual machine for windows/linux to run the program
+1. It is difficult for Macbooks with ARM arch (M1, etc). Because you will need to use a virtual machine for windows/linux to run the program. Because Vivado needs x86_64 architecture.
 2. Vitis/Vivado as a package takes up around 90-100 GB of Hard drive space. So ensure you have plenty of Storage.
 3. Vitis/Vivado will only really run comfortably with 20+ GB of RAM. You can try to do 16 GB but it will likely be slow.
 
