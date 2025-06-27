@@ -7,7 +7,7 @@ nav_order: 3.01
 
 # Lab1_Modeling_Concepts
 
-## Instroduction
+## Introduction
 
 Verilog HDL modeling language supports three kinds of modeling styles: gate-level, dataflow, and
 behavioral. The gate-level and datafow modeling are used to model combinatorial circuits whereas the
@@ -146,14 +146,15 @@ module lab1_1_2(
     not u0(not_s, s);
 
     // Implementing the 2-to-1 MUX for the least significant bit (LSB)
-    and u1(x_and_not_s[0], x[0], not_s); // AND gate for x[0] and inverted select
-    and u2(y_and_s[0], y[0], s);         // AND gate for y[0] and select
-    or  u3(m[0], x_and_not_s[0], y_and_s[0]); // OR gate for the LSB
+    // FIX HERE
+    and u1(x_and_not_s[0],,); // AND gate for x[0] and inverted select
+    and u2(y_and_s[0],,);         // AND gate for y[0] and select
+    or  u3(m[0],,); // OR gate for the LSB
 
     // Implementing the 2-to-1 MUX for the most significant bit (MSB)
-    and u4(x_and_not_s[1], x[1], not_s); // AND gate for x[1] and inverted select
-    and u5(y_and_s[1], y[1], s);         // AND gate for y[1] and select
-    or  u6(m[1], x_and_not_s[1], y_and_s[1]); // OR gate for the MSB
+    and u4(x_and_not_s[1],,); // AND gate for x[1] and inverted select
+    and u5(y_and_s[1],,);         // AND gate for y[1] and select
+    or  u6(m[1],,); // OR gate for the MSB
 
 endmodule
 
@@ -216,7 +217,7 @@ module lab1_2_1(
     assign y_out = x_in;
 endmodule
 ```
-### Paet 1-2-2
+### Part 1-2-2
 
 Model a two-bit wide 2-to-1 multiplexer using dataflow modeling with net
 delays of 3 ns.
@@ -231,9 +232,10 @@ module lab1_2_2(
     output  [1:0] m
     );
     
-   assign #3 m[0] = (x[0] & ~s) | (y[0] &s);
-   assign #3 m[1] = (x[1] & ~s) | (y[1] &s);
-   
+   assign #3 m = s ? y : x;
+   // equivalent to:
+   // assign #3 m[0] = s ? y[0] : x[0];
+   // assign #3 m[1] = s ? y[1] : x[1];
    
 endmodule
 
