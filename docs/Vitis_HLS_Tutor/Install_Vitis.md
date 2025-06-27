@@ -5,25 +5,42 @@ parent: Preparation
 nav_order: 2.01
 ---
 
-# Board and Vitis Installation Guide
+# Start setting up your board
 
-Start here for courses.
+# FPGA Board and Vitis Installation Guide.
+In this course, we will be using the AMD AUP ZU3 from AMD university program. This course goes through topics such as: FPGA architecture, verilog
+testbenches and verification, Finite State Machines, and Digital computer design. The software suite we will be using for this coures will be the
+AMD Vits/Vivado suite. Vivado is a program that takes verilog code and synthesizes it into RTL code that can be implemented and programmed to the FPGA Board. Vivado also allows 
+simulations of the verilog code to see how it performs. Vitis is a High Level Synthesis (HLS) tool from AMD that synthesis C++ code into RTL code.
 
-## Acquire PYNQ Z2 Board
 
-You're not restricted to the following vendor, but it's an example of the product you need. 
-[Example Purchase Link](https://www.newark.com/tul-corporation/1m1-m000127dvb/tul-pynq-z2-basic-kit-rohs-compliant/dp/69AC1754?st=tul-corporation)
+# What is Verilog?
+Verilog is a hardware description language, it is not a programming language. Verilog is used to describe hardware functionality in order to design 
+a circuit for implementation. 
 
-## Register with AMD 
+# What is RTL?
 
-Create your AMD account here: [AMD Account Registration](https://www.amd.com/en.html)
+RTL stands for Register Transfer level and refers to the level above transistor level. This includes Registers,nets, wires, memory, I/o ports. Verilog is written
+at the "Register Transfer Level".
 
-## Get Vitis Software
+# Acquire AMD AUP ZU3 Board.
+You’re not restricted to the following vendor, but it’s an example of the product you need. [Example Purchase Link](https://www.realdigital.org/hardware/aup-zu3 )
 
-Download Vitis™ Unified Software Platform 2023.2 from [Vitis Download Page](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html). Ensure your computer is compatible (Note: Apple Macs are not supported).
 
-Additional Info: Vitis is already installed on computers in Cadence Lab, Riggs B22.
+
+
+# Register with AMD
+It is necessary to create an AMD account to receive the Download.
+Create your AMD account here: [AMD Account Registration](https://www.amd.com/en/registration/create-account.html)
+
+# Get Vitis Software
+Download Vitis™ Unified Software Platform 2023.2 from Vitis Download Page. Ensure your computer is compatible. IMPORTANT -> If you wish to download/run Vitis/Vivado to your laptop/local PC.
+A couple notes
+1. It is difficult for Macbooks with ARM arch (m1, etc). Because you will need to use a virtual machine for windows/linux to run the program
+2. Vitis/Vivado as a package takes up around 90-100 GB of Hard drive space. So ensure you have plenty of Storage.
+3. Vitis/Vivado will only really run comfortably with 20+ GB of RAM. You can try to do 16 GB but it will likely be slow.
+
+# A note for Clemson University Students 
+Vitis/Vivado is already installed on computers in Cadence Lab, Riggs B22. So, use that!
 
 Proceed with Vitis Installation.
-
-## Proceed with Create Vitis HLS Project
