@@ -147,6 +147,7 @@ You will need to know what the trigger voltages for the pins/switches/buttons ar
 
 As you can see, in this lab, we have buttons we want to utilize, as well as leds. 
 
+### SOMETHING IS WRONG WITH THE PINOUT VOLTAGES THEY GAVE US. tHE ONES BELOW WORKED 
 
 
 * *Add constraints code:* Double click `lab1.xdc`.
@@ -171,7 +172,7 @@ set_property -dict { PACKAGE_PIN AE5   IOSTANDARD LVCMOS18 } [get_ports { led[3]
 
 ```
 
-Lines 5-8 define the pin locations for the input buttons and lines 13-16 define pin locations for output LEDs. The pin layout of PYNQ_Z2 is shown in the following figure.
+Lines 5-8 define the pin locations for the input buttons and lines 13-16 define pin locations for output LEDs. The general board layout is shown below.
 
 <div align=center><img src="lab_images/board_reference picture.PNG" alt="drawing" width="600"/></div>
 
