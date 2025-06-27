@@ -143,6 +143,7 @@ The constraints file helps Vivado interface with the hardware but assigning top-
 
 You will need to know what the trigger voltages for the pins/switches/buttons are, and which I/O's you want to assign. Go you the Board manual last page. Shown below.
 
+<div align=center><img src="lab_images/voltage_ref.PNG" alt="drawing" width="600"/></div>
 
 As you can see, in this lab, we have buttons we want to utilize, as well as leds. 
 
