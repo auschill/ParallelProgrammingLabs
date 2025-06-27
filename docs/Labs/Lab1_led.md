@@ -364,13 +364,12 @@ In order to let it work successfully, we need to add *PS* part first.
 
 * Click *+ (Add IP)*, search *zynq* and choose *ZYNQ UltraScale+ MPSoC*.
 
-* Click `Run Block Automation`. Then connect the `pl_clk0` and `maxihpm0_lpd_aclk` together. This is allowing the PS to control the PL clock.
+* Connect the `pl_clk0` and `maxihpm0_lpd_aclk` together. This is allowing the PS to control the PL clock.
 
-<div align=center><img src="imgs/1_22.png" alt="drawing" width="400"/></div>
+<div align=center><img src="lab_images/block_design.PNG" alt="drawing" width="400"/></div>
 
 * Right click `lab1` under the *Sources* window and choose `Add Module to Block Design`. In the Diagram window, you will see the *lab1_v1_0* module has been added to the block design, move the cursor to the *btn*, right click and choose *Make External*. Do the same thing on *led[3: 0]*. "Make External" tells the system you will be using this module with external ports, and not through the PS.
 
-<div align=center><img src="imgs/1_23.png" alt="drawing" width="600"/></div>
 
 * Right click in the blank *Diagram* region and choose *Validate Design*, then click *OK*.
 
@@ -380,29 +379,35 @@ In order to let it work successfully, we need to add *PS* part first.
 
 ```verilog
 module design_1
-   (DDR_addr,
-    DDR_ba,
-    DDR_cas_n,
-    DDR_ck_n,
-    DDR_ck_p,
-    DDR_cke,
-    DDR_cs_n,
-    DDR_dm,
-    DDR_dq,
-    DDR_dqs_n,
-    DDR_dqs_p,
-    DDR_odt,
-    DDR_ras_n,
-    DDR_reset_n,
-    DDR_we_n,
-    FIXED_IO_ddr_vrn,
-    FIXED_IO_ddr_vrp,
-    FIXED_IO_mio,
-    FIXED_IO_ps_clk,
-    FIXED_IO_ps_porb,
-    FIXED_IO_ps_srstb,
-    btn_0,
+   (btn_0,
     led_0);
+  input [3:0]btn_0;
+  output [3:0]led_0;
+
+  wire [3:0]btn_0_1;
+  wire [3:0]lab1_0_led;
+  wire zynq_ultra_ps_e_0_pl_clk0;
+
+  assign btn_0_1 = btn_0[3:0];
+  assign led_0[3:0] = lab1_0_led;
+  design_1_lab1_0_0 lab1_0
+       (.btn(btn_0_1),
+        .led(lab1_0_led));
+  design_1_zynq_ultra_ps_e_0_0 zynq_ultra_ps_e_0
+       (.maxigp2_arready(1'b0),
+        .maxigp2_awready(1'b0),
+        .maxigp2_bid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .maxigp2_bresp({1'b0,1'b0}),
+        .maxigp2_bvalid(1'b0),
+        .maxigp2_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .maxigp2_rid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .maxigp2_rlast(1'b0),
+        .maxigp2_rresp({1'b0,1'b0}),
+        .maxigp2_rvalid(1'b0),
+        .maxigp2_wready(1'b0),
+        .maxihpm0_lpd_aclk(zynq_ultra_ps_e_0_pl_clk0),
+        .pl_clk0(zynq_ultra_ps_e_0_pl_clk0));
+endmodule
 ```
 
 ```verilog
@@ -428,11 +433,11 @@ set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { led_0[
   
 If generate bitstream failed, please ensure the setting of the pins like below:
 
-<div align=center><img src="imgs/v1/1.png" alt="drawing" width="800"/></div>
+<div align=center><img src="lab_images/where_is_ports.PNG" alt="drawing" width="800"/></div>
 
 Please check the pin assignments are the same as the below:
 
-<div align=center><img src="imgs/v1/2.png" alt="drawing" width="800"/></div>
+<div align=center><img src="lab_images/port_data_found.PNG" alt="drawing" width="800"/></div>
 
 This process will have generated a `design_1_wrapper.bit` file under the *project_1.runs > impl_1* directory.
 
