@@ -8,10 +8,13 @@ nav_order: 2.01
 # Start setting up your board
 
 # FPGA Board and Vitis Installation Guide.
-In this course, we will be using the AMD AUP ZU3 from AMD university program. This course goes through topics such as: FPGA architecture, verilog
-testbenches and verification, Finite State Machines, and Digital computer design. The software suite we will be using for this coures will be the
-AMD Vits/Vivado suite. Vivado is a program that takes verilog code and synthesizes it into RTL code that can be implemented and programmed to the FPGA Board. Vivado also allows 
-simulations of the verilog code to see how it performs. Vitis is a High Level Synthesis (HLS) tool from AMD that synthesis C++ code into RTL code.
+In this course, we will be using the AMD AUP ZU3 board, provided through the AMD University Program. The course covers topics such as FPGA architecture, Verilog testbenches and verification, finite state machines (FSMs), and digital computer design.
+
+We will use the AMD Vivado and Vitis software suite throughout this course:
+
+Vivado is a design tool that synthesizes Verilog code into gate-level implementations for FPGAs. It enables you to perform RTL synthesis, implement your design onto the FPGA, and run simulations to verify functional behavior.
+
+Vitis is AMD’s High-Level Synthesis (HLS) tool, which compiles C or C++ code into synthesizable RTL, allowing high-level algorithmic designs to be implemented on the FPGA.
 
 
 # What is Verilog?
