@@ -98,7 +98,7 @@ We can run a Simulation to check the code by clicking the Run Simulation under t
 
 Then, we can click on the Run synthesis under the SYNTHESIS and Run implementation under the IMPLEMENTATION. We should add the appropriate board-related master XDC file to the project and edit it to include the related pins like the below:
 
-<div align=center><img src="imgs/v3/28.png" alt="drawing" width="700"/></div>
+<div align=center><img src="imgs/v5/5.PNG" alt="drawing" width="700"/></div>
 
 Generate the bitstream and program device like [Lab1](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/Verilog_Labs/Lab1_Modeling_Concepts.html).
 
@@ -135,30 +135,33 @@ module lab2_3_1_rca_dataflow(
     );
     
     // Instantiate the second full adder
+    // FIX HERE
     lab2_3_1 v1(
-        .a(a[1]),
-        .b(b[1]),
-        .cin(c_temp[0]), // Carry-in from the previous less significant adder
-        .s(s[1]),        // Sum bit for the second least significant position
-        .cout(c_temp[1]) // Carry-out used as carry-in for the next significant bit
+        .a(),
+        .b(),
+        .cin(), // Carry-in from the previous less significant adder
+        .s(),        // Sum bit for the second least significant position
+        .cout() // Carry-out used as carry-in for the next significant bit
     );
 
     // Instantiate the third full adder
+    // FIX HERE
     lab2_3_1 v2(
-        .a(a[2]),
-        .b(b[2]),
-        .cin(c_temp[1]), // Carry-in from the previous less significant adder
-        .s(s[2]),        // Sum bit for the second most significant position
-        .cout(c_temp[2]) // Carry-out used as carry-in for the next significant bit
+        .a(),
+        .b(),
+        .cin(), // Carry-in from the previous less significant adder
+        .s(),        // Sum bit for the second most significant position
+        .cout() // Carry-out used as carry-in for the next significant bit
     );
     
     // Instantiate the fourth and final full adder
+    // FIX HERE
     lab2_3_1 v3(
-        .a(a[3]),
-        .b(b[3]),
-        .cin(c_temp[2]), // Carry-in from the previous less significant adder
-        .s(s[3]),        // Sum bit for the most significant position
-        .cout(cout)    // Final carry-out, which is the carry-out of the entire 4-bit addition
+        .a(),
+        .b(),
+        .cin(), // Carry-in from the previous less significant adder
+        .s(),        // Sum bit for the most significant position
+        .cout()    // Final carry-out, which is the carry-out of the entire 4-bit addition
     );
 
 endmodule
@@ -217,8 +220,8 @@ module lab2_4_CLA_dataflow(
     assign c[0] = cin;
     assign c[1] = g[0] | (p[0] & c[0]);
     assign c[2] = g[1] | (p[1] & g[0]) | (p[1] & p[0] & c[0]);
-    assign c[3] = g[2] | (p[2] & g[1]) | (p[2] & p[1] & g[0]) | (p[2] & p[1] & p[0] & c[0]);
-    assign c[4] = g[3] | (p[3] & g[2]) | (p[3] & p[2] & g[1]) | (p[3] & p[2] & p[1] & g[0]) | (p[3] & p[2] & p[1] & p[0] & c[0]);
+    assign c[3] = g[2] | (p[] & g[]) | (p[] & p[] & g[]) | (p[] & p[] & p[] & c[]); // FIX HERE
+    assign c[4] = g[3] | (p[] & g[]) | (p[] & p[] & g[]) | (p[] & p[] & p[] & g[]) | (p[] & p[] & p[] & p[] & c[]); // FIX HERE
 
     // Sum and carry out
     assign s = p ^ c[3:0]; // Sum is Propagate XOR Carry_in
