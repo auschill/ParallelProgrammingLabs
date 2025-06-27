@@ -411,22 +411,23 @@ endmodule
 ```
 
 ```verilog
-# PYNQ Pin Assignments
+# AUP ZU3 Pin Assignments
 ############################
 # On-board Slide Buttons  #
 ############################
-set_property -dict { PACKAGE_PIN D19   IOSTANDARD LVCMOS33 } [get_ports { btn_0[0] }];
-set_property -dict { PACKAGE_PIN D20   IOSTANDARD LVCMOS33 } [get_ports { btn_0[1] }];
-set_property -dict { PACKAGE_PIN L20   IOSTANDARD LVCMOS33 } [get_ports { btn_0[2] }];
-set_property -dict { PACKAGE_PIN L19   IOSTANDARD LVCMOS33 } [get_ports { btn_0[3] }];
+set_property -dict { PACKAGE_PIN AB6   IOSTANDARD LVCMOS18 } [get_ports { btn[0] }];
+set_property -dict { PACKAGE_PIN AB7   IOSTANDARD LVCMOS18 } [get_ports { btn[1] }];
+set_property -dict { PACKAGE_PIN AB2   IOSTANDARD LVCMOS18 } [get_ports { btn[2] }];
+set_property -dict { PACKAGE_PIN AC6   IOSTANDARD LVCMOS18 } [get_ports { btn[3] }];
 
 ############################
 # On-board leds             #
 ############################
-set_property -dict { PACKAGE_PIN R14   IOSTANDARD LVCMOS33 } [get_ports { led_0[0] }];
-set_property -dict { PACKAGE_PIN P14   IOSTANDARD LVCMOS33 } [get_ports { led_0[1] }];
-set_property -dict { PACKAGE_PIN N16   IOSTANDARD LVCMOS33 } [get_ports { led_0[2] }];
-set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { led_0[3] }];
+set_property -dict { PACKAGE_PIN AF5   IOSTANDARD LVCMOS18 } [get_ports { led[0] }];
+set_property -dict { PACKAGE_PIN AE7   IOSTANDARD LVCMOS18 } [get_ports { led[1] }];
+set_property -dict { PACKAGE_PIN AH2   IOSTANDARD LVCMOS18 } [get_ports { led[2] }];
+set_property -dict { PACKAGE_PIN AE5   IOSTANDARD LVCMOS18 } [get_ports { led[3] }];
+
 ```
 
 * Click *Generate Bitstream* under *PROGRAM AND DEBUG*, then click *OK*.
@@ -437,7 +438,7 @@ If generate bitstream failed, please ensure the setting of the pins like below:
 
 Please check the pin assignments are the same as the below:
 
-<div align=center><img src="lab_images/port_data_found.PNG" alt="drawing" width="800"/></div>
+<div align=center><img src="lab_images/ports_data_found.PNG" alt="drawing" width="800"/></div>
 
 This process will have generated a `design_1_wrapper.bit` file under the *project_1.runs > impl_1* directory.
 
