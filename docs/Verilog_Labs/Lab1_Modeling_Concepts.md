@@ -102,7 +102,7 @@ Then we can click on the Run synthesis under ```SYNTHESIS``` and Run implementat
 <div align=center><img src="imgs/v5/1.PNG" alt="drawing" width="1000"/></div>
 <div align=center><img src="imgs/v5/2.PNG" alt="drawing" width="700"/></div>
 
-<div align=center><img src="imgs/v3/24.png" alt="drawing" width="700"/></div>
+<div align=center><img src="imgs/v5/3.PNG" alt="drawing" width="700"/></div>
 
 Click on the Generate Bitstream under the ```PROGRAM AND DEBUG```, and when writing bitstream is complete, we can download the file to the board and verify the lab. Here, you have two ways.
 
