@@ -152,22 +152,23 @@ As you can see, in this lab, we have buttons we want to utilize, as well as leds
 * *Add constraints code:* Double click `lab1.xdc`.
 
 ```verilog
-# PYNQ Pin Assignments
+# AUP ZU3 Pin Assignments
 ############################
 # On-board Slide Buttons  #
 ############################
-set_property -dict { PACKAGE_PIN D19   IOSTANDARD LVCMOS33 } [get_ports { btn[0] }];
-set_property -dict { PACKAGE_PIN D20   IOSTANDARD LVCMOS33 } [get_ports { btn[1] }];
-set_property -dict { PACKAGE_PIN L20   IOSTANDARD LVCMOS33 } [get_ports { btn[2] }];
-set_property -dict { PACKAGE_PIN L19   IOSTANDARD LVCMOS33 } [get_ports { btn[3] }];
+set_property -dict { PACKAGE_PIN AB6   IOSTANDARD LVCMOS18 } [get_ports { btn[0] }];
+set_property -dict { PACKAGE_PIN AB7   IOSTANDARD LVCMOS18 } [get_ports { btn[1] }];
+set_property -dict { PACKAGE_PIN AB2   IOSTANDARD LVCMOS18 } [get_ports { btn[2] }];
+set_property -dict { PACKAGE_PIN AC6   IOSTANDARD LVCMOS18 } [get_ports { btn[3] }];
 
 ############################
 # On-board leds             #
 ############################
-set_property -dict { PACKAGE_PIN R14   IOSTANDARD LVCMOS33 } [get_ports { led[0] }];
-set_property -dict { PACKAGE_PIN P14   IOSTANDARD LVCMOS33 } [get_ports { led[1] }];
-set_property -dict { PACKAGE_PIN N16   IOSTANDARD LVCMOS33 } [get_ports { led[2] }];
-set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { led[3] }];
+set_property -dict { PACKAGE_PIN AF5   IOSTANDARD LVCMOS18 } [get_ports { led[0] }];
+set_property -dict { PACKAGE_PIN AE7   IOSTANDARD LVCMOS18 } [get_ports { led[1] }];
+set_property -dict { PACKAGE_PIN AH2   IOSTANDARD LVCMOS18 } [get_ports { led[2] }];
+set_property -dict { PACKAGE_PIN AE5   IOSTANDARD LVCMOS18 } [get_ports { led[3] }];
+
 ```
 
 Lines 5-8 define the pin locations for the input buttons and lines 13-16 define pin locations for output LEDs. The pin layout of PYNQ_Z2 is shown in the following figure.
