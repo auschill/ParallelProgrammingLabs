@@ -116,7 +116,7 @@ We don't need to debug, we just need to ```Program device``` like below:
 
 Then you can press the button on the board and you can see the LED is on like below:
 
-<div align=center><img src="imgs/v3/27.png.jpg" alt="drawing" width="400"/></div>
+<div align=center><img src="imgs/v5/4.jpg" alt="drawing" width="400"/></div>
 
 
 The second way that you can refer to the [Soc_labs](https://uri-nextlab.github.io/ParallelProgrammingLabs/docs/Labs/Lab1_led.html)
