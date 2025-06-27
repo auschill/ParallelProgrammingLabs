@@ -61,29 +61,25 @@ After completing this lab, you will be able to:
 
 ### Create a Vivado Project 
 
-* Click *Create New Project*, and click *Next*. Then, give your project a name (i.e. project_1) and choose *RTL Project*. Making sure the *Project location* is the correct path that you want to save the project.
+# Open Vivado
 
-* Select the board, search `pynq` and choose `pynq-z2`, then click *Next* and *Finish*. If you do not have it, follow the instruction in the provided link below.
+Vivado (2023.2) GUI should open as below
+<div align=center><img src="new_images/vivado_open_page.PNG" alt="drawing" width="300"/></div>
+Click "Create Project"
 
-  [Add BSP file to Vivado](https://pynq.readthedocs.io/en/latest/overlay_design_methodology/board_settings.html)
+Name your project the appropriate name in the subfolder
 
-<div align=center><img src="imgs/1_21.png" alt="drawing" width="600"/></div>
+Select "RTL Project"
+<div align=center><img src="new_images/select_Rtl.PNG" alt="drawing" width="300"/></div>
+Next, you can choose to select a file already created, or create a new source file for your project. Which, you can always start a project with no files, and go in and add sources after the project is created.
+<div align=center><img src="new_images/create_new_file.PNG" alt="drawing" width="300"/></div>
+Click Next until the "Default Part" page. There are two tabs, Parts, and Boards. Go under the boards tab, see if you see AMD AUP ZU3. Additionally, you can search the parts for `xczu3eg-sfvc784-2-e` under the parts tab if your board is not already listed. Go to Add your board file page on this site.
+<div align=center><img src="new_images/snip_of_board_selection.PNG" alt="drawing" width="300"/></div>
 
-### Add source files 
+Click finish.
 
-* Read this document first.
-
--[Vivado design suite user guide](https://docs.xilinx.com/r/2022.2-English/ug895-vivado-system-level-design-entry/Introduction?tocId=YFapF_t0U4KZweOG8SPPMg)
-
-There are three kinds of source files: constrains file, design source file and silumation source file. Simulation source file and constraints file specify the timing requirements for the design and physical constraints defining the Xilinx device resources used by the design.
-
-* Click *Add Sources* under the *PROJECT MANAGER - Settings* and choose *Add or create design sources*. Then, click *Create File*, give the file name (i.e. lab1.v), and choose *Finish*. Later, you will see a window letting you define the I/O port. You don't need to change anything here, just click *OK* and choose *Yes*. Then, you will see the file under the *Design Sources* in the *Source* window. 
-
-<div align=center><img src="imgs/1_1.png" alt="drawing" width="600"/></div>
-
-* Execute similar steps to add both the constraints file and the simulation sources file.
-
-<div align=center><img src="imgs/1_2.png" alt="drawing" width="300"/></div>
+Now your project is open. To add new sources, go to the "add sources" section under the project manager. Here you can add simulation files, sources files, and constraint file to your project as need. 
+<div align=center><img src="new_images/add_sources.PNG" alt="drawing" width="300"/></div>
 
 ### Add code
 
