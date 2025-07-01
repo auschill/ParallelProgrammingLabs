@@ -9,7 +9,7 @@ nav_order: 4.02
 
 # Lab2_uart
 
-The design consists of a uart receiver receiving the input typed on a keyboard (emulated in PS) and displaying the binary equivalent of the typed character on the 4 LEDs. When a push button is pressed, the lower and upper nibbles are XORed. The block diagram is as shown in the following figure.
+The design consists of a uart receiver receiving the input typed on a keyboard (emulated in PS) and displaying the binary equivalent of the typed character on the 8 LEDs. When a push button is pressed, the lower and upper nibbles are XORed. The block diagram is as shown in the following figure.
 
 <div align=center><img src="imgs/lab2.png" alt="drawing" width="600"/></div>
 
@@ -35,114 +35,13 @@ The design consists of a uart receiver receiving the input typed on a keyboard (
 
 * Expand `uart_rx_i0` instance to see its hierarchy. This module used the baud rate generator (It generate a 16x Baud enable.) and a finite state machine. The `rxd_pin` is sampled at a rate that is 16x the baud rate.
 
-* Because there are only 4 leds on PYNQ_Z2 board (The source code was oringally used for a differenct board.), so we need to change the code in three files: `led_ctl.v`, `uart_led.v` and `uart_led_pins_pynq.xdc`.
 
 * The `uart_led_timing_pynq.xdc` file is not required for this project, as it causes a `setup timing problem`. This file was originally intended to demonstrate how to analyze timing problems, but it is not relevant for the LEDs, which do not need any timing constraints. However, if you are interested in learning more about timing analysis, you can refer to this:
 
 [Document timing](https://docs.xilinx.com/r/en-US/ug949-vivado-design-methodology/Defining-Timing-Constraints-in-Four-Steps)
 
 
-* Double click on `led_ctl.v`.
 
-```verilog
-module led_ctl(
-    input clk_rx,
-    input rst_clk_rx,
-    input btn_clk_rx,
-    input [7: 0] rx_data,
-    input rx_data_rdy,
-    output reg [3: 0] led_o
-);
-
-    reg old_rx_data_rdy;
-    reg [7: 0] char_data;
-    reg [3: 0] led_pipeline_reg;
-
-    always @(posedge clk_rx)
-    begin
-        if (rst_clk_rx)
-        begin
-            old_rx_data_rdy <= 1'b0;
-            char_data <= 8'b0;
-            led_o <= 4'b0;
-        end
-        else
-        begin
-            old_rx_data_rdy <= rx_data_rdy;
-
-            if (rx_data_rdy && !old_rx_data_rdy)
-            begin
-                char_data <= rx_data;
-            end
-
-            if (btn_clk_rx)
-                led_pipeline_reg <= char_data[7: 4];
-            else
-                led_pipeline_reg <= char_data[3: 0];
-        end
-        led_o <= led_pipeline_reg;
-    end
-endmodule
-```
-
-* Double-click on `uart_led.v`
-
-```verilog
-module uart_led(
-    input clk_pin,
-    input rst_pin,
-    input btn_pin,
-    input rxd_pin,
-    output [3:0] led_pins
-);
-
-    parameter BAUD_RATE = 115_200;
-    parameter CLOCK_RATE = 125_000_000;
-
-    wire rst_clk_rx;
-    wire btn_clk_rx;
-    wire [7: 0] rx_data;
-    wire rx_data_rdy;
-    
-     meta_harden meta_harden_rst_i0 (
-        .clk_dst      (clk_pin),
-        .rst_dst      (1'b0),    // No reset on the hardener for reset!
-        .signal_src   (rst_pin),
-        .signal_dst   (rst_clk_rx)
-      );
-
-      meta_harden meta_harden_btn_i0 (
-        .clk_dst      (clk_pin),
-        .rst_dst      (rst_clk_rx),
-        .signal_src   (btn_pin),
-        .signal_dst   (btn_clk_rx)
-      );
-
-      uart_rx #(
-        .CLOCK_RATE   (CLOCK_RATE),
-        .BAUD_RATE    (BAUD_RATE)
-      ) uart_rx_i0 (
-        .clk_rx      (clk_pin),
-        .rst_clk_rx  (rst_clk_rx),
-
-        .rxd_i       (rxd_pin),
-        .rxd_clk_rx  (),
-
-        .rx_data_rdy (rx_data_rdy),
-        .rx_data     (rx_data),
-        .frm_err     ()
-      );
-
-      led_ctl led_ctl_i0 (
-        .clk_rx      (clk_pin),
-        .rst_clk_rx  (rst_clk_rx),
-        .btn_clk_rx  (btn_clk_rx),
-        .rx_data     (rx_data),
-        .rx_data_rdy (rx_data_rdy),
-        .led_o       (led_pins)
-      );
-endmodule
-```
 * You need to add this constraint file (`uart_led_pins_pynq.xdc`) to your project.
 
 * Double click on `uart_led_pins_pynq.xdc`:
