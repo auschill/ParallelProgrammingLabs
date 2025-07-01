@@ -27,7 +27,7 @@ The design consists of a uart receiver receiving the input typed on a keyboard (
 
 * You should see a hierarchy like this in your Sources window.
 
-<div align=center><img src="imgs/2_1.png" alt="drawing" width="400"/></div>
+<div align=center><img src="lab2images/window_hierarchy.PNG" alt="drawing" width="400"/></div>
 
 ### Add code
 
@@ -79,11 +79,11 @@ The synthesis process will be run on the `uart_led.v` and all its hierarchical f
 
 * Click on the Table tab in the Project Summary tab.
 
-<div align=center><img src="imgs/2_5.png" alt="drawing" width="600"/></div>
+<div align=center><img src="lab2images/hw_utilization.PNG" alt="drawing" width="600"/></div>
 
 * Click on Schematic under the Open Synthesized Design tasks of Synthesis tasks of the Flow Navigator pane to view the synthesized design in a schematic view.
 
-<div align=center><img src="imgs/2_6.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="lab2images/uart_schematic.PNG  " alt="drawing" width="1000"/></div>
 
 Notice that IBUF and OBUF are automatically instantiated (added) to the design as the input and output are buffered. There are still four lower level modules instantiated.
 
