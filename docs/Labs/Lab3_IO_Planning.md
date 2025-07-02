@@ -182,7 +182,7 @@ For more detailed information about timing, please refer to the [Timing Analysis
 <div align=center><img src="l3image/report_timing_summary.PNG" alt="drawing" width="600"/></div>
 
 ## A note about Setup/Hold times and Slack
-Setup and Hold times are the quantity of time needed for a signal to be high to be counted as valid and not metastable. Setup time is the amount of time a signal should be high before the rising (or falling) edge of a clock signal to be valid. Hold time is the amount of time a signal should be high after the falling (or rising) edge of a clock signal to be valid.
+Setup times are the quantity of time needed for a signal to be high to be counted as valid and not metastable. Setup time is the amount of time a signal should be high before the rising (or falling) edge of a clock signal to be valid. Hold time is the amount of time a signal should be high after the falling (or rising) edge of a clock signal to be valid.
 
 Slack is difference in the required arrival time of a signal at an endpoint (D input flipfop), and the actual arrival time at the endpoint.
 * The worst negative slack is the term for the largest difference from all nets for Setup times
@@ -191,11 +191,11 @@ Slack is difference in the required arrival time of a signal at an endpoint (D i
 
 * Click OK to run the analysis. The Timing Results view opens at the bottom of the Vivado IDE.
 
-<div align=center><img src="imgs/4_17.png" alt="drawing" width="600"/></div>
+<div align=center><img src="l3image/deign_timing_summary.PNG" alt="drawing" width="600"/></div>
 
 * The Design Timing Summary report provides a brief worst Setup and Hold slack information and Number of failing endpoints to indicate whether the design has met timing or not. Note that there are two timing failures under the hold check. Click on the link next to Worst Hold Slack (WHS) to see the list of failing paths.
 
-<div align=center><img src="imgs/4_18.png" alt="drawing" width="600"/></div>
+<div align=center><img src="l3image/intra_clk_pins.PNG" alt="drawing" width="600"/></div>
 
 * Double-click on the Path 11 to see the actual path detail.
 
