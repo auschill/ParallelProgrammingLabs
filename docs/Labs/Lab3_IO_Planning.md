@@ -116,7 +116,7 @@ Design Rule Checks are automated checks that ensure your design is not violating
 
 * Add the source files used in Lab2 (from `Lab2/project_1/project_1.srcs/sources_1/new`, note: this directory is mine, yours might be different.) to this project, please exclude `uart_led.v` and copy the `uart_led.v` content in Lab2 into the `uart_led.v` you created after migrating operation.
 
-<div align=center><img src="l3image/window_hierarchy.PNG" alt="drawing" width="1000"/></div>
+<div align=center><img src="l3image/window_hierarchy.PNG" alt="drawing" width="600"/></div>
 
 ### Step 2 Synthesize the Design
 
