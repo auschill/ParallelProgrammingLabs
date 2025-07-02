@@ -135,7 +135,7 @@ For more detailed information about timing, please refer to the [Timing Analysis
 
 * Specify the frequency of the object `clk_pin` to be 125 MHz, notice the Period, Rise At and Fall At are automatically populated. Also notice the Tcl command that can be previewed at the bottom of the wizard. Click Next to proceed.
 
-<div align=center><img src="imgs/4_11.png" alt="drawing" width="600"/></div>
+<div align=center><img src="l3image/primary_clock.PNG" alt="drawing" width="600"/></div>
 
 * There are no missing Generated Clocks, click Next to proceed.
 
@@ -145,7 +145,7 @@ For more detailed information about timing, please refer to the [Timing Analysis
 
 * The wizard identifies Input Delays needed for the `btn_pin` and `rst_pin` pins. Do the following:
 
-    1. Here you will see three rows: `btn_pin`, `rst_pin`, and `rxd_pin`. We only need to identify Input Delays for the `btn_pin` and `rst_pin` pins. Press Ctrl and select the two rows (`btn_pin` and `rst_pin`). Uncheck `rxd_pin`.
+    1. Here you will see three rows: `btn_pin`, `rst_pin`, and `rxd_pin`. We only need to identify Input Delays for the `btn_pin` and `rst_pin` pins. You will need to do the picture below for the `btn_pin` and `rst_pin`.
 
     2. Enter the `tco_min` value to be -0.5 ns and everything else as 0 ns. Click Apply.
 
@@ -153,11 +153,11 @@ For more detailed information about timing, please refer to the [Timing Analysis
 
     4. Click Next.
 
-<div align=center><img src="imgs/4_12.png" alt="drawing" width="600"/></div>
+<div align=center><img src="l3image/input_delays.PNG" alt="drawing" width="600"/></div>
 
 * Enter the `tsu` and `thd` as 0 ns and enter the `trce_dly_max` and `trce_dly_min` as -2.20 ns for `led_pins`. Click Apply and then click Next.
 
-<div align=center><img src="imgs/4_13.png" alt="drawing" width="600"/></div>
+<div align=center><img src="l3image/output_delays.PNG" alt="drawing" width="600"/></div>
 
 * There are no Combinatorial Delays identified, click Next to proceed.
 
