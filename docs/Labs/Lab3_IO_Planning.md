@@ -89,13 +89,16 @@ The provided design places the UART (`rx`) pin of the PS (processing system) on 
 
 <div align=center><img src="l3image/led_pins_ports.PNG" alt="drawing" width="1000"/></div>
 
-* *Select File > Constraints > Save*. Enter uart_led_pynq in the File name field, and click OK.
+* *Select File > Constraints > Save*. Enter constr1 in the File name field, and click OK.
 
-<div align=center><img src="imgs/4_7.png" alt="drawing" width="400"/></div>
+<div align=center><img src="l3image/create_constraints.PNG" alt="drawing" width="400"/></div>
 
 The `uart_led_pynq.xdc` file will be created and added to the Sources tab.
 
-<div align=center><img src="imgs/4_8.png" alt="drawing" width="400"/></div>
+<div align=center><img src="l3image/before_create_constraints.PNG" alt="drawing" width="400"/></div>
+
+# A note about DRC
+Design Rule Checks are automated checks that ensure your design is not violating electrical or logical constraints. DRC's should occur after synthesis to ensure the design in ready for implementation.
 
 * Expand the *Flow Navigator > I/O PLANNING > Open I/O Design > Report DRC*.
 
