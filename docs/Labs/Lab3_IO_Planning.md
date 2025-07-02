@@ -97,7 +97,7 @@ The `uart_led_pynq.xdc` file will be created and added to the Sources tab.
 
 <div align=center><img src="l3image/before_create_constraints.PNG" alt="drawing" width="400"/></div>
 
-# A note about DRC
+### A note about DRC
 Design Rule Checks are automated checks that ensure your design is not violating electrical or logical constraints. DRC's should occur after synthesis to ensure the design in ready for implementation.
 
 * Expand the *Flow Navigator > I/O PLANNING > Open I/O Design > Report DRC*.
