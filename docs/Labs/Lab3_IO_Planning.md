@@ -191,7 +191,7 @@ Slack is difference in the required arrival time of a signal at an endpoint (D i
 
 * Click OK to run the analysis. The Timing Results view opens at the bottom of the Vivado IDE.
 
-<div align=center><img src="l3image/deign_timing_summary.PNG" alt="drawing" width="600"/></div>
+<div align=center><img src="l3image/design_timing_summary.PNG" alt="drawing" width="600"/></div>
 
 * The Design Timing Summary report provides a brief worst Setup and Hold slack information and Number of failing endpoints to indicate whether the design has met timing or not. Note that there are two timing failures under the hold check. Click on the link next to Worst Hold Slack (WHS) to see the list of failing paths.
 
