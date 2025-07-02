@@ -199,11 +199,11 @@ Slack is difference in the required arrival time of a signal at an endpoint (D i
 
 * Double-click on the Path 11 to see the actual path detail.
 
-<div align=center><img src="imgs/4_19.png" alt="drawing" width="600"/></div>
+<div align=center><img src="l3image/path11_data.PNG" alt="drawing" width="600"/></div>
 
 * Select Path 11, right-click and select Schematic.
 
-<div align=center><img src="imgs/4_20.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="l3image/path11_schematic.PNG" alt="drawing" width="1000"/></div>
 
 #### Implement the Design and analyze Timing Summary
 
