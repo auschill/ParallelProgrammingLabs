@@ -28,7 +28,7 @@ After completing this lab, you will be able to:
   ## A note about Uart.
 Uart is "Universal asynchronous receiver transmitter". Devices can communicate serially via the uart protocol. The Uart protocol sends data in a frame, and the reciever and transmitter do not share a common clock. Instead, they agree upon a "baud" rate, which is a data transmission rate. In this case, 115200 bps. Each Uart port contains a rx and tx line. Rx is the receive line, and tx is the transmit line.
 
-<div align=center><img src="imgs/4_4.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="l3image/uart_hardware.png" alt="drawing" width="1000"/></div>
 
 
 ## Design Description
