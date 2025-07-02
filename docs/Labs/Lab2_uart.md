@@ -97,19 +97,19 @@ Notice that IBUF and OBUF are automatically instantiated (added) to the design a
 
 * Click on Report Utilization under the Synthesized Design, and click *OK* to generate the utilization report.
 
-<div align=center><img src="imgs/2_10.png" alt="drawing" width="600"/></div>
+<div align=center><img src="lab2images/report_utilization.PNG" alt="drawing" width="600"/></div>
 
-* Select Slice LUTs entry in the left pane and see the utilization by lower-level instances. You can expand the instances in the right pane to see the complete hierarchy utilization.
+* Select CLB LUTs entry in the left pane and see the utilization by lower-level instances. You can expand the instances in the right pane to see the complete hierarchy utilization.
 
-<div align=center><img src="imgs/2_11.png" alt="drawing" width="600"/></div>
+<div align=center><img src="lab2images/CLB_LUT_utilization.PNG" alt="drawing" width="600"/></div>
 
 * Click on Report Power under the Synthesized Design, and click *OK* to generate the estimated power consumption report using default values. Note that this is just an estimate as no simulation run data was provided and no accurate activity rate, or environment information was entered. 
 
-<div align=center><img src="imgs/2_12.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="lab2images/power_summary.PNG" alt="drawing" width="600"/></div>
 
 #### Implement the Design
 
-* Click *Create Block Design* under *IP INTEGRATOR*. Click *+ (Add IP)* and search *zynq*, add *ZYNQ7 Processing Syatem* into the block design.
+* Click *Create Block Design* under *IP INTEGRATOR*. Click *+ (Add IP)* and search *zynq*, add *ZYNQ UltraScale+ MPSoC* into the block design.
 
 * Create a wrapper on the block diagram and set it as the top file (Do it yourslef!).
 
@@ -121,17 +121,17 @@ Notice that IBUF and OBUF are automatically instantiated (added) to the design a
 
 * Back to *Diagram* window, add `axi uartlite` module. We want to send data to the uart_led module through its `rx` port. To do this, we will use the UART from PS side, which is connected to the ARM core by the AXI protocol. Then, we will connect the `tx` port of the UART on the PS side (`axi uartlite`) to the `uart_led` module in PL. Double-click on this module and configure it as shown in the subsequent figure. To prevent the `rx` port of `axi uartlite` from becoming floating, set the `rx` port to 1 (it is not needed for this project; ensure it remains in the IDLE state). We can disregard other ports, such as the interrupt of `axi uartlite`, since it's an output port.
 
-<div align=center><img src="imgs/2_28.png" alt="drawing" width="600"/></div>
+<div align=center><img src="lab2images/Axi_uart_ip.PNG" alt="drawing" width="600"/></div>
 
-* Now, let us create the system clock. Right click on the blank part and choose *Create port*. Set the port name to be *clk_pin_0*, set the *Type* as *Clock* and the *Frequency* as 125 MHz. And connect this port to `uart_led`'s `clk_pin` and `ZYNQ7 Processing System`'s `M_AXI_GP0_ACLK`. Remeber to connect the `clk_pin` to `ZYNQ7 Processing System`'s `M_AXI_GP0_ACLK` first and then connect the `uart_led`'s `clk_pin`.
+* Now, let us create the system clock. Right click on the blank part and choose *Create port*. Set the port name to be *clk_pin_0*, set the *Type* as *Clock* and the *Frequency* as 125 MHz. And connect this port to `uart_led`'s `clk_pin` and `Zynq UltraScale+ MPSoC`'s `maxihpm0_lpd_aclk`. Remeber to connect the `clk_pin` to `Zynq UltraScale+ MPSoC`'s `maxihpm0_pld_aclk` first and then connect the `uart_led`'s `clk_pin`.
 
-<div align=center><img src="imgs/2_23.png" alt="drawing" width="400"/></div>
+<div align=center><img src="lab2images/create_clock_port.PNG" alt="drawing" width="400"/></div>
 
 * The `rst_pin` of `uart_led` module is active high. You will need to convert it to active low for uart_led module. So add `util_vector_logic` as a bridge that connect the `peripheral_areset` of `Processor System Reset`.
 
 * Double click on `util_vector_logic` and set the `C_SIZE` as 1 and select the *not* operation.
 
-<div align=center><img src="imgs/2_24.png" alt="drawing" width="600"/></div>
+<div align=center><img src="lab2images/util_vector_logic.PNG" alt="drawing" width="600"/></div>
 
 * Expand `UART` in the `axi_uartlite` module, and connect `tx` to `rxd_pin` port of `uart_led` module. Connect `rx` to a constant module (add IP and set the value = 0; Figure it out yourself!).
 
@@ -143,7 +143,7 @@ Notice that IBUF and OBUF are automatically instantiated (added) to the design a
 
 * The whole system diagram is shown in the following figure.
 
-<div align=center><img src="imgs/2_25.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="lab2images/block_diagram.PNG" alt="drawing" width="1000"/></div>
 
 * You need to ensure that the wrapper file is set as the top-level module of your project before generating the bitstream file. This is because Vivado only uses the top-level module to create the bitstream file, and ignores any other files in your project.
 
@@ -157,8 +157,8 @@ Right click on `design_1_wrapper` and choose Set to Top if it is not the top fil
 
 By click the `Schematic` under the `Open Implemented Design`, and you can check the pin assignments like below:
 
-<div align=center><img src="imgs/v1/5_2.png" alt="drawing" width="1000"/></div>
-
+<div align=center><img src="lab2images/io_port_link.PNG" alt="drawing" width="400"/></div>
+<div align=center><img src="lab2images/pin_out.PNG" alt="drawing" width="1000"/></div>
 And the pin assignments of led are below the page.
 
 #### Generate the Bitstream
