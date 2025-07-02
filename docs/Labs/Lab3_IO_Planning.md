@@ -65,7 +65,7 @@ The provided design places the UART (`rx`) pin of the PS (processing system) on 
 
 <div align=center><img src="imgs/4_1.png" alt="drawing" width="600"/></div>
 
-<div align=center><img src="imgs/4_2.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="l3image/IO_diagram.PNG" alt="drawing" width="1000"/></div>
 
 ### Step 2 Create I/O Ports, Assign Various Pins and Add Source Files
 
@@ -77,17 +77,17 @@ The provided design places the UART (`rx`) pin of the PS (processing system) on 
 
 * Similarly, create the `btn_pin`, `rxd_pin` and `rst_pin` input ports.
 
-<div align=center><img src="imgs/4_3.png" alt="drawing" width="600"/></div>
+<div align=center><img src="l3image/create_clk_pin.PNG" alt="drawing" width="600"/></div>
 
 * Assign input pins `clk_pin`, `btn_pin` and `rst_pin` to H16, D19 and D20 locations using the Device view and package pins.
 
-<div align=center><img src="imgs/4_4.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="l3image/scalar_ports.PNG" alt="drawing" width="1000"/></div>
 
-* Do the same operations and assign output `pins led_pins[0]` to `led_pins[3]` to locations R14, P14, N16, M14. They all will be LVCMOS33.
+* Do the same operations and assign output `pins led_pins[0]` to `led_pins[3]` to locations R14, P14, N16, M14. They all will be LVCMOS18.
 
-<div align=center><img src="imgs/4_5.png" alt="drawing" width="400"/></div>
+<div align=center><img src="l3image/creatse_led_pins.PNG" alt="drawing" width="400"/></div>
 
-<div align=center><img src="imgs/4_6.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="l3image/led_pins_ports.PNG" alt="drawing" width="1000"/></div>
 
 * *Select File > Constraints > Save*. Enter uart_led_pynq in the File name field, and click OK.
 
