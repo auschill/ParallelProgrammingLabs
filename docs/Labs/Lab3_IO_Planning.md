@@ -105,15 +105,15 @@ The `uart_led_pynq.xdc` file will be created and added to the Sources tab.
 
 * Click on Migrate to RTL.
 
-* The Migrate to RTL form will be displayed with Top RTL file field showing `{TUTORIAL}/io_1.v` entry. Change `io_1.v` to `uart_led.v` (for PYNQ-Z2), and click OK.
+* The Migrate to RTL form will be displayed with Top RTL file field showing `{TUTORIAL}/io_1.v` entry. Change `io_1.v` to `uart_led.v` (AUP - ZU3), and click OK.
 
-<div align=center><img src="imgs/4_9.png" alt="drawing" width="600"/></div>
+<div align=center><img src="l3image/migrate_to_rtl.PNG" alt="drawing" width="600"/></div>
 
 * Select the Hierarchy tab and notice that the `uart_led.v` file has been added to the project with top-level module name as `ios`. If you double-click the entry, you will see the module name with the ports listing.
 
 * Add the source files used in Lab2 (from `Lab2/project_1/project_1.srcs/sources_1/new`, note: this directory is mine, yours might be different.) to this project, please exclude `uart_led.v` and copy the `uart_led.v` content in Lab2 into the `uart_led.v` you created after migrating operation.
 
-<div align=center><img src="imgs/4_10.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="l3image/window_hierarchy.PNG" alt="drawing" width="1000"/></div>
 
 ### Step 2 Synthesize the Design
 
