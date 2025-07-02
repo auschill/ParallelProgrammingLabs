@@ -11,7 +11,7 @@ nav_order: 4.03
 
 ## Introduction
 
-In this lab you will use the uart_led design that was introduced in the previous labs. You will start the project with I/O Planning, enter pin locations, and export it to the RTL. You will then create the timing constraints and perform the timing analysis.
+In this lab you will use the uart_led design that was introduced in the previous labs. You will start the project with I/O Planning, enter pin locations, and migrate it to an RTL project. YOu will then create your own custom timing constraints with the constraints wizard. Lastly, you will perform a timing analysis.
 
 ## Objectives
 
@@ -27,9 +27,14 @@ After completing this lab, you will be able to:
 
 ## Design Description
 
-The design consists of a uart receiver receiving the input typed on a keyboard (emulated on the PS side) and displaying the binary equivalent of the typed character on the 4 LEDs. When a push button is pressed, the lower and upper nibbles are swapped.
+The design consists of a uart receiver receiving the input typed on a keyboard (emulated on the PS side) and displaying the binary equivalent of the typed character on the 8 LEDs. When a push button is pressed, the lower and upper nibbles are swapped.
 
-In this design we will use board’s USB-UART which is controlled by the Zynq’s ARM Cortex-A9 processor. Our PL design needs access to this USB-UART. First thing we will do is to create a processing system design which will put the USB-UART connections in a simple GPIO-style and make it available to the PL section.
+In this design we will use board’s USB-UART which is controlled by the Zynq’s ARM Cortex-A53 processor. Our PL design needs access to this USB-UART. First thing we will do is to create a processing system design which will put the USB-UART connections in a simple GPIO-style and make it available to the PL section.
+
+## A note about Uart.
+Uart is "Universal asynchronous receiver transmitter". Devices can communicate serially via the uart protocol. The Uart protocol sends data in a frame, and the reciever and transmitter do not share a common clock. Instead, they agree upon a "baud" rate, which is a data transmission rate. In this case, 115200 bps. Each Uart port contains a rx and tx line. Rx is the receive line, and tx is the transmit line.
+
+<div align=center><img src="imgs/4_4.png" alt="drawing" width="1000"/></div>
 
 The provided design places the UART (`rx`) pin of the PS (processing system) on the Cortex-A9 in a simple GPIO mode to allow the UART to be connected (passed through) to the PL. The processor samples the `rx` signal and sends it to the EMIO channel 0 which is connected to `rx` input of the HDL module provided in the Static directory.
 
@@ -47,7 +52,7 @@ The provided design places the UART (`rx`) pin of the PS (processing system) on 
 
 * Select Do not import I/O ports at this time, and click Next.
 
-* In the Default Board form, select PYNQ-Z2.
+* In the Default Board form, select ZYNQ AUP ZU3.
 
 * Click Next.
 
