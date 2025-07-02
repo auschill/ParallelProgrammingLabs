@@ -79,7 +79,7 @@ The provided design places the UART (`rx`) pin of the PS (processing system) on 
 
 <div align=center><img src="l3image/create_clk_pin.PNG" alt="drawing" width="600"/></div>
 
-* Assign input pins `clk_pin`, `btn_pin` and `rst_pin` to H16, D19 and D20 locations using the Device view and package pins.
+* Assign input pins `btn_pin` and `rst_pin` to AB6, AB7 locations using the Device view and package pins. Do not assign rxd_pin or clk_pin. They will be assigned later.
 
 <div align=center><img src="l3image/scalar_ports.PNG" alt="drawing" width="1000"/></div>
 
