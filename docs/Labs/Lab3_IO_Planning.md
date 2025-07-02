@@ -105,7 +105,7 @@ Design Rule Checks are automated checks that ensure your design is not violating
 * Click OK. Notice the design rules checker has run and warnings are reported. Ignore the warnings.
 
 * Expand the *Flow Navigator > I/O PLANNING > Open I/O Design > Report Noise* and click OK. Notice the noise analysis is done on the output pins only (`led_pins`) and the results are displayed.
-
+## Migrate to RTL
 * Click on Migrate to RTL.
 
 * The Migrate to RTL form will be displayed with Top RTL file field showing `{TUTORIAL}/io_1.v` entry. Change `io_1.v` to `uart_led.v` (AUP - ZU3), and click OK.
