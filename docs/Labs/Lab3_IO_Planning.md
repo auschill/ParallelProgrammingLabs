@@ -169,7 +169,7 @@ For more detailed information about timing, please refer to the [Timing Analysis
 
 * Note the wizard generated the `clk_pin` constraint for an 8 ns period (or 125 MHz) (PYNQ-Z2). Notice in the All Constraints window, 7/9 constraints will be created. There is no need to click Apply since the constraints have already been applied in the Constraints Wizard.
 
-<div align=center><img src="imgs/4_15.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="l3image/timing_constraints.PNG" alt="drawing" width="1000"/></div>
 
 * Open `uart_led_.xdc` (if it was already opened, click Reload in the yellow status bar) and notice additional constraints were added to the last line of the file.
 
@@ -179,11 +179,11 @@ For more detailed information about timing, please refer to the [Timing Analysis
 
 * In the Options tab, select min_max from the Path delay type drop-down list.
 
-<div align=center><img src="imgs/4_16.png" alt="drawing" width="600"/></div>
+<div align=center><img src="l3image/report_timing_summary.PNGg" alt="drawing" width="600"/></div>
 
 * Click OK to run the analysis. The Timing Results view opens at the bottom of the Vivado IDE.
 
-<div align=center><img src="imgs/4_17.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="imgs/4_17.png" alt="drawing" width="600"/></div>
 
 * The Design Timing Summary report provides a brief worst Setup and Hold slack information and Number of failing endpoints to indicate whether the design has met timing or not. Note that there are two timing failures under the hold check. Click on the link next to Worst Hold Slack (WHS) to see the list of failing paths.
 
