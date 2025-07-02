@@ -83,7 +83,8 @@ The provided design places the UART (`rx`) pin of the PS (processing system) on 
 
 <div align=center><img src="l3image/scalar_ports.PNG" alt="drawing" width="1000"/></div>
 
-* Do the same operations and assign output `pins led_pins[0]` to `led_pins[3]` to locations R14, P14, N16, M14. They all will be LVCMOS18.
+* Do the same operations and assign output `pins led_pins[0]` to `led_pins[7]` to locations AF2, AG1, AE4, AH1, AE5, AH2, AE7, AF5.
+*  They all will be LVCMOS18.
 
 <div align=center><img src="l3image/creatse_led_pins.PNG" alt="drawing" width="400"/></div>
 
