@@ -25,16 +25,19 @@ After completing this lab, you will be able to:
 
 * Perform timing analysis.
 
+  ## A note about Uart.
+Uart is "Universal asynchronous receiver transmitter". Devices can communicate serially via the uart protocol. The Uart protocol sends data in a frame, and the reciever and transmitter do not share a common clock. Instead, they agree upon a "baud" rate, which is a data transmission rate. In this case, 115200 bps. Each Uart port contains a rx and tx line. Rx is the receive line, and tx is the transmit line.
+
+<div align=center><img src="imgs/4_4.png" alt="drawing" width="1000"/></div>
+
+
 ## Design Description
 
 The design consists of a uart receiver receiving the input typed on a keyboard (emulated on the PS side) and displaying the binary equivalent of the typed character on the 8 LEDs. When a push button is pressed, the lower and upper nibbles are swapped.
 
 In this design we will use board’s USB-UART which is controlled by the Zynq’s ARM Cortex-A53 processor. Our PL design needs access to this USB-UART. First thing we will do is to create a processing system design which will put the USB-UART connections in a simple GPIO-style and make it available to the PL section.
 
-## A note about Uart.
-Uart is "Universal asynchronous receiver transmitter". Devices can communicate serially via the uart protocol. The Uart protocol sends data in a frame, and the reciever and transmitter do not share a common clock. Instead, they agree upon a "baud" rate, which is a data transmission rate. In this case, 115200 bps. Each Uart port contains a rx and tx line. Rx is the receive line, and tx is the transmit line.
 
-<div align=center><img src="imgs/4_4.png" alt="drawing" width="1000"/></div>
 
 The provided design places the UART (`rx`) pin of the PS (processing system) on the Cortex-A9 in a simple GPIO mode to allow the UART to be connected (passed through) to the PL. The processor samples the `rx` signal and sends it to the EMIO channel 0 which is connected to `rx` input of the HDL module provided in the Static directory.
 
