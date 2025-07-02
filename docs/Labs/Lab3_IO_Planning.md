@@ -181,6 +181,14 @@ For more detailed information about timing, please refer to the [Timing Analysis
 
 <div align=center><img src="l3image/report_timing_summary.PNG" alt="drawing" width="600"/></div>
 
+## A note about Setup/Hold times and Slack
+Setup and Hold times are the quantity of time needed for a signal to be high to be counted as valid and not metastable. Setup time is the amount of time a signal should be high before the rising (or falling) edge of a clock signal to be valid. Hold time is the amount of time a signal should be high after the falling (or rising) edge of a clock signal to be valid.
+
+Slack is difference in the required arrival time of a signal at an endpoint (D input flipfop), and the actual arrival time at the endpoint.
+* The worst negative slack is the term for the largest difference from all nets for Setup times
+* The worst Hold slack is the term for the largest difference from all nets for Hold times
+* Total slack is the cumulative slack for all nets
+
 * Click OK to run the analysis. The Timing Results view opens at the bottom of the Vivado IDE.
 
 <div align=center><img src="imgs/4_17.png" alt="drawing" width="600"/></div>
