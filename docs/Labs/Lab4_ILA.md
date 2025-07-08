@@ -45,7 +45,7 @@ Please copy the whole `Lab2` project and re-name it as `Lab4`:
       input            rst_pin,      // Active HIGH reset (from pin)
       input            btn_pin,      // Button to swap high and low bits
       input            rxd_pin,      // RS232 RXD pin - directly from pin
-      output     [3:0] led_pins,      // 8 LED outputs
+      output     [7:0] led_pins,      // 8 LED outputs
       output             rx_data_rdy,  // Data ready output of uart_rx
       output [7:0]       rx_data      // Data output of uart_rx
     );
