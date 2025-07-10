@@ -394,31 +394,31 @@ endmodule
 
 We can run a Simulation to check the code by clicking the ```Run Simulation``` under ```SIMULATION``` and choose the first ```Run Behavioral Simulation```. 
 
-<div align=center><img src="imgs/v2/1.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="lab8images/simulation.PNG" alt="drawing" width="1000"/></div>
 
 Add constraints code: `lab2.xdc`.
 
 ```verilog
-# PYNQ Pin Assignments
+# ZYNQ Pin Assignments
 ############################
 # On-board Slide Buttons  #
 ############################
-set_property PACKAGE_PIN N16 [get_ports {led_0[2]}]
-set_property PACKAGE_PIN P14 [get_ports {led_0[1]}]
-set_property PACKAGE_PIN R14 [get_ports {led_0[0]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {led_0[2]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {led_0[1]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {led_0[0]}]
-set_property PACKAGE_PIN G14 [get_ports locked_0]
-set_property PACKAGE_PIN M14 [get_ports ready_0]
-set_property PACKAGE_PIN L15 [get_ports tamper_0]
-set_property IOSTANDARD LVCMOS33 [get_ports locked_0]
-set_property IOSTANDARD LVCMOS33 [get_ports ready_0]
-set_property IOSTANDARD LVCMOS33 [get_ports tamper_0]
+set_property PACKAGE_PIN AF2 [get_ports {led_0[2]}]
+set_property PACKAGE_PIN AG1 [get_ports {led_0[1]}]
+set_property PACKAGE_PIN AE4 [get_ports {led_0[0]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {led_0[2]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {led_0[1]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {led_0[0]}]
+set_property PACKAGE_PIN AH2 [get_ports locked_0]
+set_property PACKAGE_PIN AE7 [get_ports ready_0]
+set_property PACKAGE_PIN AF5 [get_ports tamper_0]
+set_property IOSTANDARD LVCMOS18 [get_ports locked_0]
+set_property IOSTANDARD LVCMOS18 [get_ports ready_0]
+set_property IOSTANDARD LVCMOS18 [get_ports tamper_0]
 
+set_property PACKAGE_PIN AB6 [get_ports key_0]
+set_property IOSTANDARD LVCMOS18 [get_ports key_0]
 
-set_property PACKAGE_PIN L19 [get_ports submit_0]
-set_property IOSTANDARD LVCMOS33 [get_ports submit_0]
 ```
 
 ### Implementation
@@ -427,7 +427,7 @@ The part can reference the [Generate Bitstream](https://uri-nextlab.github.io/Pa
 
 The block design is shown below:
 
-<div align=center><img src="imgs/v2/2.png" alt="drawing" width="800"/></div>
+<div align=center><img src="lab8images/block_diagram.PNG" alt="drawing" width="800"/></div>
 
 Here, we use the ```AXI_GPIO``` IP, write the number to the ```dint``` as input and read the value of the LEDs as the display.
 
