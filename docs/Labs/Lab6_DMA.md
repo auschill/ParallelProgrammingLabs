@@ -176,25 +176,11 @@ An alternative to SG for large transfers is to segment your memory transfers in 
   
 * Disable the `reset` under the output Clocks options. Connect the `locked` port to the `ext_reset_in` of `Processor System Reset`.
 
-* Click `Run Block Automation` and `Run connection automation`.
-
-<div align=center><img src="imgs/6_6.png" alt="drawing" width="600"/></div>
-
-* Delete the *orange line* shown in the following figure, and connect the `clk_out1` to the `M_AXI_GP0_ACLK` and `S_AXI_HP0_ACLK` of `ZYNQ7 Processing System`. Then click `Run Connection Automation`.
-
-<div align=center><img src="imgs/v1/7.png" alt="drawing" width="1000"/></div>
-
-<div align=center><img src="imgs/6_8.png" alt="drawing" width="1000"/></div>
-
-* Click `s_axi_lite_aclk`, and change the `clock source` to `/clk_wiz_0/clk_out1`. Repeat this operation to other clock signals.
-
-<div align=center><img src="imgs/6_9.png" alt="drawing" width="600"/></div>
-
 * Connect the `M_AXIS_Double` of `AXIS_Double_v1_0` to the `S_AXIS_S2MM` of `AXI Direcr Memory Access`, and `M_AXIS_MM2S` of DMA to `S_AXIS_Double` of `AXIS_Double`. Then click `Run Connection Automation`
 
 * The whole diagram will show like the following.
 
-<div align=center><img src="imgs/v1/6.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="l6image/full_diagram.PNG" alt="drawing" width="1000"/></div>
 
 * Create wrapper and set it as top 
 
