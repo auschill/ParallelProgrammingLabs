@@ -98,7 +98,7 @@ Back to the source window, right-click `AXIS_Double` and choose `Add Module to B
 
 In the block diagram, which should contain the ZYNQ PS block, add the *AXI Direct Memory Access* block to your design. 
 
-<div align=center><img src="imgs/v1/8.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="l6image/unconnected block diagram.PNG" alt="drawing" width="1000"/></div>
 
 ### DMA background
 
@@ -136,7 +136,7 @@ An alternative to SG for large transfers is to segment your memory transfers in 
 
 * Double-click the DMA to open the configuration settings
 
-<div align=center><img src="imgs/6_2.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="l6image/dma_real.PNG" alt="drawing" width="1000"/></div>
 
 * Uncheck Enable Scatter Gather Engine to disable Scatter Gather
 
@@ -158,19 +158,21 @@ An alternative to SG for large transfers is to segment your memory transfers in 
 
 * Click OK to accept the changes
 
-<div align=center><img src="imgs/6_3.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="l6image/dma_real.PNG" alt="drawing" width="1000"/></div>
 
 ### Connect the DMA
 
 *  Double click `ZYNQ7 Processing System`, *PS-PL Configuration > HP Slave AXI Interface > Select S AXI HP0 Interface*.
 
-<div align=center><img src="imgs/6_4.png" alt="drawing" width="1000"/></div>
+<div align=center><img src="l6image/zynq_io.PNG" alt="drawing" width="1000"/></div>
 
-* Add `Clocking Wizard`, double click it. In the *Board option*, change the *Board Interface* in the *CLK_IN1* row to `sys clock`.
+* Add `Clocking Wizard`, double click it. In the *Board option*, change the *Board Interface* in the *CLK_IN1* row to `clk_100mhz`.
 
-<div align=center><img src="imgs/6_5.png" alt="drawing" width="600"/></div>
+<div align=center><img src="l6image/clock_wiz_in.PNG" alt="drawing" width="600"/></div>
 
 * In the *Output Clocks* option, change the output frequency to 125M Hz.
+* 
+  <div align=center><img src="l6image/clock_wiz_out.PNG" alt="drawing" width="600"/></div>
   
 * Disable the `reset` under the output Clocks options. Connect the `locked` port to the `ext_reset_in` of `Processor System Reset`.
 
